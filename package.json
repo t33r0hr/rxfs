@@ -1,0 +1,46 @@
+{
+  "name": "rxfs",
+  "version": "0.0.0",
+  "main": "./release/index.js",
+  "typings": "./release/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm run build",
+    "prestart": "npm run build",
+    "start": "npm run dev",
+    "dev": "./node_modules/.bin/nodemon -e ts --ignore dist/ --exec \"npm run dev\"",
+    "watch:test": "ts-mocha -w ./test/**/*.spec.ts",
+    "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
+    "version": "npm run release",
+    "postversion": "git push && git push --tags",
+    "build": "npm run build:ts",
+    "build:release": "NODE_ENV=production npm run build",
+    "build:package": "NODE_ENV=package npm run build",
+    "build:ts": "tsc",
+    "package:minify": "uglifyjs release/index.js --source-map release/index.min.js.map --source-map-url release/index.js.map --compress --mangle --screw-ie8 --output release/index.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@dergoldenefoehn.de:/opt/git/rxfs.git"
+  },
+  "keywords": [],
+  "author": "Matthias Buchholz <mb@averagejoe.de>",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/chai": "^3.5.1",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^7.0.13",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "ts-mocha": "^1.0.3",
+    "ts-node": "^3.0.2",
+    "tslint": "^5.1.0",
+    "typescript": "^2.2.2"
+  },
+  "dependencies": {
+    "@types/shelljs": "^0.7.0",
+    "rxjs": "^5.3.0",
+    "shelljs": "^0.7.7"
+  }
+}
