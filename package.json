@@ -15,7 +15,7 @@
     "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
     "version": "npm run build:release",
     "postversion": "git push && git push --tags",
-    "build": "npm run build:ts",
+    "build": "npm run build:release",
     "prebuild:release": "rm -rf ./release",
     "prebuild": "rm -rf ./release",
     "build:release": "NODE_ENV=production npm run build:ts:release",
