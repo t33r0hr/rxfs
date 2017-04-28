@@ -5,7 +5,11 @@ import { exec } from './exec'
 export * from './interfaces'
 export * from './exec'
 export * from './find'
-export * from './fs'
+export * from './diff'
+export * from './readFile'
+export * from './readdir'
+export * from './stat'
+export * from './exists'
 export * from './from'
 
 export const readdir = ( filepath:string ):Observable<string> => {
