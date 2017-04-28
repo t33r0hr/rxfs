@@ -8,7 +8,11 @@ const rxjs_1 = require("rxjs");
 const exec_1 = require("./exec");
 __export(require("./exec"));
 __export(require("./find"));
-__export(require("./fs"));
+__export(require("./diff"));
+__export(require("./readFile"));
+__export(require("./readdir"));
+__export(require("./stat"));
+__export(require("./exists"));
 __export(require("./from"));
 exports.readdir = (filepath) => {
     return exec_1.exec(`find . -type file`, { cwd: filepath }).map(value => path.join(filepath, value.stdout.toString('utf8')))
