@@ -1,6 +1,6 @@
 {
   "name": "rxfs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./release/index.js",
   "typings": "./release/index.d.ts",
   "scripts": {
@@ -13,7 +13,7 @@
     "dev": "./node_modules/.bin/nodemon -e ts --ignore dist/ --exec \"npm run dev\"",
     "watch:test": "ts-mocha -w ./test/**/*.spec.ts",
     "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
-    "version": "npm run release",
+    "version": "npm run build:release",
     "postversion": "git push && git push --tags",
     "build": "npm run build:ts",
     "prebuild:release": "rm -rf ./release",
