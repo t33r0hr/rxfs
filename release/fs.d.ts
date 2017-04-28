@@ -15,7 +15,12 @@ export declare const readfileFull: (filepath: string, full?: boolean) => Observa
 export declare const readFile: (filename: string, ...args: any[]) => Observable<string>;
 export declare const writeFile: (filename: string, content: string | Buffer, ...args: any[]) => Observable<string>;
 export declare const readfile: (filepath: string, full?: boolean) => Observable<string>;
-export declare const readDir: (filename: string) => Observable<string>;
+/**
+ * read contents of a directory
+ * @param  {string}             dirname path to directory
+ * @return {Observable<string>}          observable emitting contents of directory
+ */
+export declare function readDir(dirname: string): Observable<string>;
 export declare const readstats: (filepath: string) => Observable<fs.Stats>;
 export declare const unlink: (filepath: string) => Observable<boolean>;
 export declare const mkdir: (filepath: string) => Observable<string>;

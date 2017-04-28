@@ -78,8 +78,13 @@ export const readfile = ( filepath:string, full:boolean=false ):Observable<strin
   })).map(buffer => buffer.toString()).concat()
 }
 
-export const readDir = ( filename:string ):Observable<string> => {
-  return Observable.fromPromise(async.readdir(filename).catch(error=>Promise.resolve([])))
+/**
+ * read contents of a directory
+ * @param  {string}             dirname path to directory
+ * @return {Observable<string>}          observable emitting contents of directory
+ */
+export function readDir( dirname:string ):Observable<string> {
+  return Observable.fromPromise(async.readdir(dirname).catch(error=>Promise.resolve([]))).concat()
 }
 
 export const readstats = ( filepath:string ):Observable<fs.Stats> => Observable.fromPromise(async.stat(filepath))

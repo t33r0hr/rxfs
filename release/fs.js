@@ -63,9 +63,15 @@ exports.readfile = (filepath, full = false) => {
         encoding: 'utf8'
     })).map(buffer => buffer.toString()).concat();
 };
-exports.readDir = (filename) => {
-    return rxjs_1.Observable.fromPromise(exports.async.readdir(filename).catch(error => Promise.resolve([])));
-};
+/**
+ * read contents of a directory
+ * @param  {string}             dirname path to directory
+ * @return {Observable<string>}          observable emitting contents of directory
+ */
+function readDir(dirname) {
+    return rxjs_1.Observable.fromPromise(exports.async.readdir(dirname).catch(error => Promise.resolve([]))).concat();
+}
+exports.readDir = readDir;
 exports.readstats = (filepath) => rxjs_1.Observable.fromPromise(exports.async.stat(filepath));
 exports.unlink = (filepath) => rxjs_1.Observable.fromPromise(exports.async.unlink(filepath).then(() => true));
 exports.mkdir = (filepath) => rxjs_1.Observable.fromPromise(exports.async.mkdir(filepath).then(() => filepath));

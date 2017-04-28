@@ -4,7 +4,9 @@
   "main": "./release/index.js",
   "typings": "./release/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretest": "npm run build:ts",
+    "test": "NODE_ENV=test ts-mocha ./src/diff.spec.ts",
+    "test:watch": "./scripts/watch.sh test",
     "postinstall": "npm run build",
     "prestart": "npm run build",
     "start": "npm run dev",
@@ -14,9 +16,13 @@
     "version": "npm run release",
     "postversion": "git push && git push --tags",
     "build": "npm run build:ts",
-    "build:release": "NODE_ENV=production npm run build",
+    "prebuild:release": "rm -rf ./release",
+    "prebuild": "rm -rf ./release",
+    "build:release": "NODE_ENV=production npm run build:ts:release",
+    "build:release:watch": "./scripts/watch.sh build:release",
     "build:package": "NODE_ENV=package npm run build",
     "build:ts": "tsc",
+    "build:ts:release": "tsc -p ./tsconfig.release.json",
     "package:minify": "uglifyjs release/index.js --source-map release/index.min.js.map --source-map-url release/index.js.map --compress --mangle --screw-ie8 --output release/index.min.js"
   },
   "repository": {
@@ -40,7 +46,9 @@
   },
   "dependencies": {
     "@types/shelljs": "^0.7.0",
+    "ceylon": "^0.9.1",
     "rxjs": "^5.3.0",
+    "rxshell": "git+ssh://git@dergoldenefoehn.de:/opt/git/rxshell.git",
     "shelljs": "^0.7.7"
   }
 }
