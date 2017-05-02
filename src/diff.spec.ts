@@ -6,7 +6,7 @@ import * as fs from 'fs'
 import { logMap } from './logger'
 import { assertObservables, CompareAsserter, compareItems, expectObs } from './assert'
 
-import { diff } from './diff'
+import { diff } from './'
 
 import * as path from 'path'
 
@@ -23,7 +23,9 @@ const testFiles = [ TEST_FILE, TEST_FILE_DIFF ]
 describe('test diff',()=>{
 
   it('shows diff',()=>{
-    return diff(TEST_FILE,TEST_FILE_DIFF).map ( logMap('diff') ).toPromise()
+    return diff(TEST_FILE,TEST_FILE_DIFF)
+      //.map ( logMap('diff') )
+      .toPromise()
   })
 
 })

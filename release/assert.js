@@ -10,7 +10,7 @@ exports.assertObservables = (source, target, asserter) => {
     });
 };
 exports.compareItems = (item, other, idx) => {
-    console.log('items at %s\n', idx, item, '\n', other, '\n---');
+    //console.log('items at %s\n', idx, item, '\n', other, '\n---' )
     ceylon_1.default(item).toEqual(other, `items differ at ${idx}. expected "${item}" to be "${other}"`);
 };
 exports.expectObs = (source) => {

@@ -19,7 +19,7 @@
     "suppressExcessPropertyErrors": true,
     "suppressImplicitAnyIndexErrors": true,
     "outDir": "dist",
-    "lib": ["es6"],
+    "lib": ["es6","es2015"],
     "skipLibCheck": true
   },
   "include": [

@@ -2,7 +2,7 @@ import { Observable } from 'rxjs'
 import * as path from 'path'
 import { logMap } from './logger'
 
-import { existsSync } from './fs'
+import { exists } from './'
 import { exec, StreamData } from 'rxshell'
 import { file as tmpFile } from './tmp'
 
@@ -14,14 +14,15 @@ export const diff = ( opts?:any, ...targets:string[] ) => {
   
   const parser = diffParser()
 
-  return Observable.from(targets).flatMap(
+  return Observable
+    .from(targets)
+    .flatMap(
       target => {
-        if ( existsSync(target) )
-        {
-          //console.log('is file: \n---\n', target, '\n---')
-          return Observable.of(target)
-        }
-        return tmpFile(target)
+        return exists ( target ).flatMap ( doesExist => {
+          if ( doesExist )
+            return Observable.of(target)
+          return tmpFile(target)
+        } )
       }
     )
     .toArray()

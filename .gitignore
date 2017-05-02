@@ -1,2 +1,3 @@
 npm-debug.log.*
 dist
+test/textfile_new.txt

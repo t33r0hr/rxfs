@@ -5,8 +5,10 @@
   "typings": "./release/index.d.ts",
   "scripts": {
     "pretest": "npm run build:ts",
-    "test": "NODE_ENV=test ts-mocha ./src/diff.spec.ts",
+    "test": "NODE_ENV=test ts-mocha ./src/*.spec.ts",
     "test:watch": "./scripts/watch.sh test",
+    "test:writeFile": "NODE_ENV=test ts-mocha ./src/writeFile.spec.ts",
+    "test:writeFile:watch": "./scripts/watch.sh test:writeFile",
     "postinstall": "npm run build",
     "prestart": "npm run build",
     "start": "npm run dev",
@@ -42,7 +44,8 @@
     "ts-mocha": "^1.0.3",
     "ts-node": "^3.0.2",
     "tslint": "^5.1.0",
-    "typescript": "^2.2.2"
+    "typescript": "^2.2.2",
+    "rxlogger": "git+ssh://git@dergoldenefoehn.de:/opt/git/rxlogger.git"
   },
   "dependencies": {
     "@types/shelljs": "^0.7.0",

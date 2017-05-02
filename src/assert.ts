@@ -14,7 +14,7 @@ export const assertObservables = <T>( source:Observable<T>, target:Observable<T>
 }
 
 export const compareItems = <T>( item:T, other:T, idx?:number ) => {
-  console.log('items at %s\n', idx, item, '\n', other, '\n---' )
+  //console.log('items at %s\n', idx, item, '\n', other, '\n---' )
   expect(item).toEqual(other,`items differ at ${idx}. expected "${item}" to be "${other}"` )
 }
 

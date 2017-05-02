@@ -19,17 +19,6 @@ interface CompareAsserter<T> {
   ( item:T, other:T, idx?:number):void
 }
 
-const assertObservables = <T>( source:Observable<T>, target:Observable<T>, asserter:CompareAsserter<T> ) => {
-  return Observable.zip(source,target).flatMap ( ([left,right],idx) => {
-    asserter(left,right,idx)
-    return Observable.of(true)
-  } )
-}
-
-const compareItems = <T>( item:T, other:T, idx?:number ) => {
-  console.log('items at %s\n', idx, item, '\n', other, '\n---' )
-  expect(item).toEqual(other,`items differ at ${idx}. expected "${item}" to be "${other}"` )
-}
 
 describe('test readdir',function(){
 
