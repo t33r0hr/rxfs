@@ -4,6 +4,7 @@ export * from './exec';
 export * from './find';
 export * from './diff';
 export * from './readFile';
+export * from './writeFile';
 export * from './readdir';
 export * from './stat';
 export * from './exists';

@@ -10,6 +10,7 @@ __export(require("./exec"));
 __export(require("./find"));
 __export(require("./diff"));
 __export(require("./readFile"));
+__export(require("./writeFile"));
 __export(require("./readdir"));
 __export(require("./stat"));
 __export(require("./exists"));

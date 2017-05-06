@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const rxjs_1 = require("rxjs");
-const fs_1 = require("./fs");
+const _1 = require("./");
 const rxshell_1 = require("rxshell");
 const tmp_1 = require("./tmp");
 exports.diff = (opts, ...targets) => {
@@ -9,12 +9,14 @@ exports.diff = (opts, ...targets) => {
         return exports.diff({}, opts, ...targets);
     }
     const parser = diffParser();
-    return rxjs_1.Observable.from(targets).flatMap(target => {
-        if (fs_1.existsSync(target)) {
-            //console.log('is file: \n---\n', target, '\n---')
-            return rxjs_1.Observable.of(target);
-        }
-        return tmp_1.file(target);
+    return rxjs_1.Observable
+        .from(targets)
+        .flatMap(target => {
+        return _1.exists(target).flatMap(doesExist => {
+            if (doesExist)
+                return rxjs_1.Observable.of(target);
+            return tmp_1.file(target);
+        });
     })
         .toArray()
         .map(filenames => {
