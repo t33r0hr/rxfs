@@ -6,7 +6,7 @@ import * as fs from 'fs'
 import { logMap } from './logger'
 import { assertObservables, CompareAsserter, compareItems, expectObs } from './assert'
 
-import { exists, StatTypes, isType, isDirectory, isFile, isSymbolicLink, isSocket } from './exists'
+import { exists, existsSync, StatTypes, isType, isDirectory, isFile, isSymbolicLink, isSocket } from './exists'
 import * as path from 'path'
 
 const ROOT = path.resolve(__dirname,'..')
@@ -56,6 +56,36 @@ describe('test exists.ts',()=>{
 
     it(`returns true for empty file ${TEST_FILE_EMPTY}`,()=>{
       return expectObs(exists(TEST_FILE_EMPTY)).toMatch(Observable.of(true)).toPromise()
+    })
+
+  })
+
+  describe('existsSync() on existing folder',()=>{
+
+    it('returns true',()=>{
+
+      expect(existsSync(TEST_DIR)).toEqual(true)
+
+    })
+
+  })
+
+  describe('existsSync() on existing files',()=>{
+
+    it(`returns true for directory ${TEST_DIR}`,()=>{
+      expect(existsSync(TEST_DIR)).toEqual(true)
+    })
+
+    it(`returns true for directory link ${TEST_DIR_LINK}`,()=>{
+      expect(existsSync(TEST_DIR_LINK)).toEqual(true)
+    })
+
+    it(`returns true for file ${TEST_FILE}`,()=>{
+      expect(existsSync(TEST_FILE)).toEqual(true)
+    })
+
+    it(`returns true for empty file ${TEST_FILE_EMPTY}`,()=>{
+      expect(existsSync(TEST_FILE_EMPTY)).toEqual(true)
     })
 
   })

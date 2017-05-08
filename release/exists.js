@@ -12,6 +12,7 @@ var StatTypes;
     StatTypes[StatTypes["CharacterDevice"] = 5] = "CharacterDevice";
     StatTypes[StatTypes["SymbolicLink"] = 6] = "SymbolicLink";
 })(StatTypes = exports.StatTypes || (exports.StatTypes = {}));
+exports.existsSync = (filepath) => !!stat_1.statSync(filepath);
 exports.exists = (filepath) => stat_1.stat(filepath)
     .map(stats => !!stats)
     .catch(error => {

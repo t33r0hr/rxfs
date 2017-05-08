@@ -12,7 +12,10 @@ __export(require("./diff"));
 __export(require("./readFile"));
 __export(require("./writeFile"));
 __export(require("./readdir"));
+__export(require("./mkdir"));
 __export(require("./stat"));
+const tmp = require("./tmp");
+exports.tmp = tmp;
 __export(require("./exists"));
 __export(require("./from"));
 exports.readdir = (filepath) => {

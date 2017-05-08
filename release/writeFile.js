@@ -12,6 +12,11 @@ exports.writeFile = (filepath, content, encoding) => {
     else if (encoding) {
         options = encoding || {};
     }
+    else {
+        options = {
+            encoding: 'utf8'
+        };
+    }
     return rxshell_1.writeToStream(content, fs.createWriteStream(filepath, options), options.encoding);
 };
 exports.mapWriteFile = (filepath, content, encoding) => {

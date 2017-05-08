@@ -18,8 +18,14 @@ export const writeFile = ( filepath:string, content:Observable<Buffer>, encoding
       encoding
     }
   }
-  else if ( encoding ) {
+  else if ( encoding ) 
+  {
     options = encoding || {}
+  } else 
+  {
+    options = {
+      encoding: 'utf8'
+    }
   }
   return writeToStream(content,fs.createWriteStream(filepath,options),options.encoding)
 }

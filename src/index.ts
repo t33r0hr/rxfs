@@ -9,7 +9,10 @@ export * from './diff'
 export * from './readFile'
 export * from './writeFile'
 export * from './readdir'
+export * from './mkdir'
 export * from './stat'
+import * as tmp from './tmp'
+export { tmp }
 export * from './exists'
 export * from './from'
 

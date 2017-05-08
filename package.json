@@ -4,6 +4,7 @@
   "main": "./release/index.js",
   "typings": "./release/index.d.ts",
   "scripts": {
+    "doc": "typedoc --out documentation",
     "pretest": "npm run build:ts",
     "test": "NODE_ENV=test ts-mocha ./src/*.spec.ts",
     "test:watch": "./scripts/watch.sh test",

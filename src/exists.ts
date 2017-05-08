@@ -1,7 +1,8 @@
 import { Observable } from 'rxjs'
 import { _promisify } from './common'
+import * as fs from 'fs'
 
-import { stat, Stats } from './stat'
+import { stat, Stats, statSync } from './stat'
 
 export enum StatTypes {
   Directory,
@@ -12,6 +13,8 @@ export enum StatTypes {
   CharacterDevice,
   SymbolicLink
 }
+
+export const existsSync = ( filepath:string ):boolean => !!statSync(filepath)
 
 export const exists = ( filepath:string ):Observable<boolean> => stat(filepath)
 .map ( stats => !!stats )

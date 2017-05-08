@@ -8,6 +8,7 @@ export declare enum StatTypes {
     CharacterDevice = 5,
     SymbolicLink = 6,
 }
+export declare const existsSync: (filepath: string) => boolean;
 export declare const exists: (filepath: string) => Observable<boolean>;
 export declare const isType: (statType: StatTypes, filepath: string) => Observable<boolean>;
 export declare const isDirectory: (filepath: string) => Observable<boolean>;
