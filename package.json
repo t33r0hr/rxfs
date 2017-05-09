@@ -37,20 +37,20 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@types/chai": "^3.5.1",
+    "@types/chai": "^3.5.2",
     "@types/mocha": "^2.2.41",
-    "@types/node": "^7.0.13",
-    "mocha": "^3.2.0",
+    "@types/node": "^7.0.18",
+    "mocha": "^3.3.0",
     "nodemon": "^1.11.0",
     "ts-mocha": "^1.0.3",
-    "ts-node": "^3.0.2",
-    "tslint": "^5.1.0",
-    "typescript": "^2.2.2"    
+    "ts-node": "^3.0.4",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
   },
   "dependencies": {
-    "@types/shelljs": "^0.7.0",
+    "@types/shelljs": "^0.7.1",
     "ceylon": "^0.9.1",
-    "rxjs": "^5.3.0",
+    "rxjs": "5.3.1",
     "rxshell": "github:afkmatze/rxshell",
     "shelljs": "^0.7.7"
   }
