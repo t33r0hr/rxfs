@@ -64,7 +64,8 @@ describe('test readFile',function(){
     })
 
     it('is an observable',()=>{
-      expect(readFile(test_json_file,'utf8')).toBeA(Observable)
+      const source = readFile(test_json_file,'utf8')
+      expect((<any>source).constructor.name).toEqual('Observable')
     })
 
     it('succeeds reading',()=>{
