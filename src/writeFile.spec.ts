@@ -3,7 +3,6 @@ import expect, { assert } from 'ceylon'
 import { Observable } from 'rxjs'
 import * as fs from 'fs'
 
-import { logMap, logObservable, log } from 'rxlogger'
 import { assertObservables, CompareAsserter, compareItems, expectObs } from './assert'
 
 import { writeFile, mapWriteFile } from './writeFile'
