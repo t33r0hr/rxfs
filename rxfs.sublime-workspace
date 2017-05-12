@@ -1,0 +1,1548 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"conc",
+				"concat\tproperty"
+			],
+			[
+				"Works",
+				"WorkspaceMeta\talias"
+			],
+			[
+				"WorkspaceN",
+				"WorkspaceNodeType\ttype parameter"
+			],
+			[
+				"opt",
+				"demandOption\tmethod"
+			],
+			[
+				"op",
+				"option\tmethod"
+			],
+			[
+				"WorkspaceNo",
+				"WorkspaceNodeType\ttype parameter"
+			],
+			[
+				"WorkS",
+				"WorkspaceNodeType\talias"
+			],
+			[
+				"Work",
+				"WorkspaceNodeTypes\tenum"
+			],
+			[
+				"Sitema",
+				"SitemapActiveItem\talias"
+			],
+			[
+				"SiteM",
+				"SitemapItem\talias"
+			],
+			[
+				"defa",
+				"defaultChapter\tconst"
+			],
+			[
+				"Pub",
+				"PublicationFixtures.generated\tscript"
+			],
+			[
+				"nam",
+				"componentName\tproperty"
+			],
+			[
+				"comp",
+				"componentStream\tconst"
+			],
+			[
+				"COm",
+				"COMPONENTS_CACHE\tconst"
+			],
+			[
+				"Log",
+				"LogOperatorPlugin\talias"
+			],
+			[
+				"Req",
+				"RequestCallback\tinterface"
+			],
+			[
+				"PublicationTemplate",
+				"PublicationComponentTemplateData\tinterface"
+			],
+			[
+				"path",
+				"pathname\tconst"
+			],
+			[
+				"compo",
+				"componentData\tconst"
+			],
+			[
+				"combine",
+				"combineLatest\tproperty"
+			],
+			[
+				"com",
+				"combineAll\tproperty"
+			],
+			[
+				"conca",
+				"concatAll\tproperty"
+			],
+			[
+				"log",
+				"logError\tconst"
+			],
+			[
+				"tmp",
+				"templateData\tconst"
+			],
+			[
+				"temp",
+				"templateData\tconst"
+			],
+			[
+				"re",
+				"readFile\tproperty"
+			],
+			[
+				"te",
+				"types.enum\tscript"
+			],
+			[
+				"Index",
+				"IndexTemplateDataItem\talias"
+			],
+			[
+				"Inde",
+				"IndexType\talias"
+			],
+			[
+				"IndexT",
+				"IndexTemplateData\talias"
+			],
+			[
+				"Compon",
+				"ComponentModel\talias"
+			],
+			[
+				"templa",
+				"templateSource\tparameter"
+			],
+			[
+				"frm",
+				"fromPromise\tlet"
+			],
+			[
+				"ch",
+				"child_process\texternal module name"
+			],
+			[
+				"Subs",
+				"Subscription\talias"
+			],
+			[
+				"Templa",
+				"TemplateData\tinterface"
+			],
+			[
+				"tep",
+				"templateFile\tparameter"
+			],
+			[
+				"abs",
+				"absoluteFilepath\tconst"
+			],
+			[
+				"Comop",
+				"ComponentModel\talias"
+			],
+			[
+				"crea",
+				"createTemplateSource\tconst"
+			],
+			[
+				"c",
+				"createTemplateByName\tconst"
+			],
+			[
+				"template",
+				"templateFiles\tconst"
+			],
+			[
+				"mer",
+				"mergeAll\tproperty"
+			],
+			[
+				"coc",
+				"concatAll\tproperty"
+			],
+			[
+				"im",
+				"importAlias\tproperty"
+			],
+			[
+				"ki",
+				"KIO_PATHS\talias"
+			],
+			[
+				"KIO_",
+				"KIO_PATHS\talias"
+			],
+			[
+				"TemplateF",
+				"TemplateFile\tinterface"
+			],
+			[
+				"cr",
+				"createTemplateSource\tconst"
+			],
+			[
+				"get",
+				"getIndexData\tconst"
+			],
+			[
+				"Com",
+				"ComponentModel\talias"
+			],
+			[
+				"I",
+				"IndexTemplateData\tinterface"
+			],
+			[
+				"na",
+				"name\tproperty"
+			],
+			[
+				"tem",
+				"TEMPLATES\talias"
+			],
+			[
+				"fin",
+				"findFiles\tconst"
+			],
+			[
+				"hand",
+				"handleError\tconst"
+			],
+			[
+				"C",
+				"ComponentModel\ttype"
+			],
+			[
+				"cl",
+				"classes\tdirectory"
+			],
+			[
+				"p",
+				"publication\tdirectory"
+			],
+			[
+				"Templ",
+				"TemplateType\talias"
+			],
+			[
+				"templ",
+				"templateType\tparameter"
+			],
+			[
+				"CommandC",
+				"CommandConfigCreateComponent\tinterface"
+			],
+			[
+				"Comma",
+				"CommandConfig\tinterface"
+			],
+			[
+				"In",
+				"IndexType\tenum"
+			],
+			[
+				"app",
+				"applyFilter\tconst"
+			],
+			[
+				"KioComp",
+				"KioComponentType\tenum"
+			],
+			[
+				"Co",
+				"ComponentType\ttype"
+			],
+			[
+				"cmp",
+				"comp\tparameter"
+			],
+			[
+				"me",
+				"mergeAll\tproperty"
+			],
+			[
+				"a",
+				"asap\tproperty"
+			],
+			[
+				"reso",
+				"resolvedPath\tlet"
+			],
+			[
+				"creat",
+				"createWithPath\talias"
+			],
+			[
+				"merg",
+				"merge\tproperty"
+			],
+			[
+				"retur",
+				"returnFn\tlocal var"
+			],
+			[
+				"logM",
+				"logMapLabel\tconst"
+			],
+			[
+				"st",
+				"stdout\tproperty"
+			],
+			[
+				"KIO",
+				"KIO_PATHS\talias"
+			],
+			[
+				"eval",
+				"evalComponentFile\tmethod"
+			],
+			[
+				"f",
+				"getFile\tmethod"
+			],
+			[
+				"Compo",
+				"ComponentModel\talias"
+			],
+			[
+				"s",
+				"stdout\tproperty"
+			],
+			[
+				"KioCom",
+				"KioComponentType\talias"
+			],
+			[
+				"to",
+				"toPromise\tproperty"
+			],
+			[
+				"as",
+				"async\tproperty"
+			],
+			[
+				"pub",
+				"publishReplay\tproperty"
+			],
+			[
+				"Exec",
+				"ExecSyncOptions\tinterface"
+			],
+			[
+				"KIO_PR",
+				"KIO_PROJECT_ROOT\talias"
+			],
+			[
+				"m",
+				"mtime\tproperty"
+			],
+			[
+				"cac",
+				"cacheSource\tconst"
+			],
+			[
+				"toCon",
+				"toContainKeys\tmethod"
+			],
+			[
+				"KIoC",
+				"KioComponentType\tenum"
+			],
+			[
+				"merge",
+				"mergeAll\tproperty"
+			],
+			[
+				"subs",
+				"subscribe\tmethod"
+			],
+			[
+				"tak",
+				"take\tproperty"
+			],
+			[
+				"bufferT",
+				"bufferToggle\tproperty"
+			],
+			[
+				"buff",
+				"buffer\tproperty"
+			],
+			[
+				"bu",
+				"bufferToggle\tproperty"
+			],
+			[
+				"KI",
+				"KIO_PROJECT_CACHE\talias"
+			],
+			[
+				"K",
+				"KIO_PROJECT_CACHE\tconst"
+			],
+			[
+				"cre",
+				"createTemplateByName\tmethod"
+			],
+			[
+				"ass",
+				"assertObs\tconst"
+			],
+			[
+				"readF",
+				"readFile\tfunction"
+			],
+			[
+				"sub",
+				"subscribe\tmethod"
+			],
+			[
+				"buffer",
+				"bufferTime\tproperty"
+			],
+			[
+				"act",
+				"actionAdd\tconst"
+			],
+			[
+				"COmp",
+				"ComponentModel\talias"
+			],
+			[
+				"Comp",
+				"ComponentModel\talias"
+			],
+			[
+				"g",
+				"getTime\tmethod"
+			],
+			[
+				"func",
+				"Function\tinterface"
+			],
+			[
+				"toBeA",
+				"toBeAn\tmethod"
+			],
+			[
+				"IndexNa",
+				"IndexNameToFileType\tinterface"
+			],
+			[
+				"wri",
+				"writeSync\tfunction"
+			],
+			[
+				"be",
+				"beforeEach\tfunction"
+			],
+			[
+				"resol",
+				"resolveRoot\tconst"
+			],
+			[
+				"fielp",
+				"filepath\tparameter"
+			],
+			[
+				"co",
+				"console\tdirectory"
+			],
+			[
+				"asser",
+				"assertions\tconst"
+			],
+			[
+				"meth",
+				"methodName\tconst"
+			],
+			[
+				"met",
+				"methodName\tconst"
+			],
+			[
+				"FST",
+				"FSType\ttype"
+			],
+			[
+				"expe",
+				"expect\talias"
+			],
+			[
+				"ext",
+				"extensions\tconst"
+			],
+			[
+				"KIOPR",
+				"KIO_PROJECT_ROOT\tconst"
+			],
+			[
+				"exte",
+				"extensions\tconst"
+			],
+			[
+				"defin",
+				"defineProperty\tmethod"
+			],
+			[
+				"extens",
+				"extensions\tconst"
+			],
+			[
+				"Exte",
+				"Extension\tinterface"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 2103,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/test.rx.ts",
+			"settings":
+			{
+				"buffer_size": 613,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/find.ts",
+			"settings":
+			{
+				"buffer_size": 30,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rxfs.sublime-project",
+			"settings":
+			{
+				"buffer_size": 116,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".npmignore",
+			"settings":
+			{
+				"buffer_size": 29,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/interfaces.ts",
+			"settings":
+			{
+				"buffer_size": 82,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tsconfig.json",
+			"settings":
+			{
+				"buffer_size": 757,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tsconfig.release.json",
+			"settings":
+			{
+				"buffer_size": 148,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "pack",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 611.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Volumes/Macintosh HD 2/Development/Projects/Typescript/rxfs",
+		"/Volumes/Macintosh HD 2/Development/Projects/Typescript/rxfs/src"
+	],
+	"file_history":
+	[
+		"/Volumes/Macintosh HD 2/Development/Projects/Typescript/rxfs/src/fs.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/Typescript/rxfs/src/from.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/Typescript/rxfs/src/exec.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/CLI/wsm/wsm-node/src/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/CLI/wsm/wsm-node/src/workspace/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/components/kio-component-builder/kio-component-builder.component.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/navigation/resolvers/publication-resolver.service.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/publication/fragment/paper-lead/paper-lead.component.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/navigation/components/kio-navigation/kio-navigation.component.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/navigation/components/kio-navigation-error/kio-navigation-error.component.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/app.routing.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/package.json",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/app.module.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/navigation/resolvers/publication-resolver.interfaces.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/services/kio-backend.service.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/bmwaj-ctn/src/app/modules/kio-data/navigation/resolvers/publication-resolver.service.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/PublicationCriterias.generated.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/node_modules/kio-ng2-component-routing/src/mocking/service/content-mocking.service.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/.kio-ng2-cache/components/publication/PaperLead.json",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/.kio-ng2-cache/components/navigation/KioNavigationLoader.json",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/StructureComponents.generated.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/PublicationComponents.generated.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/.kio-ng2-cache/components/publication/TestContainer.json",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/NavigationComponents.generated.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/PublicationFixtures.generated.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/publication/fragment/test-container/test-container.component.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/publication/fragment/test-container/test-container.component.scss",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/components/source/tsc/stream.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/components/source/cache/stream.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/components/interfaces.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/console/interfaces.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/console/operators.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/console/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/console/operator/map.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/types/index/render.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/types/publication/render.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/components/create.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/env/interfaces.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/console/classes/Logger.class.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/indexes/interfaces.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/console/api.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/classes/Writer.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/commands/component/yargs.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/commands/component/exec.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/release/commands/component/exec.js",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/interfaces.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/commands/indexes/exec.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/commands/indexes/yargs.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/utils/rx/fs/fs.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/utils/rx/fs/find.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/files.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/utils/rx/fs/exec.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/release/templates/types/index/render.js",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/node_modules/ejs/lib/ejs.js",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/release/commands/indexes/exec.js",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/utils/rx/fs/interfaces.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/types/interfaces.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/indexes/template.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/template/interfaces.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/utils/rx/fs/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/utils/rx/fs/from.ts",
+		"/Users/tEErohr/.bash_profile",
+		"/Users/tEErohr/Projects/github/DefinitelyTypes/types",
+		"/Users/tEErohr/.bash_aliases",
+		"/Users/tEErohr/Projects/github/DefinitelyTyped/types/*",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/node",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/utils/rx/fs.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/template/files.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/indexes/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/indexes/target.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/types/index/map.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/commands/indexes/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/types/index/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/package.json",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/write.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/types.enum.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/components/classes/PublicationComponent.class.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/env/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/env/config.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/components/template.spec.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/utils/eval.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/components/source/interfaces.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/env/path.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/env/constants.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/utils/rx/fs.spec.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/components/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/components/source/source.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/components/source/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/utils/rx/log.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/cache/types/components.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/console/format/Formatter.class.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/store/components/types.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/indexes/stream.spec.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/api.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/components/stream.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/indexes/write.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/indexes/stream.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/types/index/create.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/types/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/cache/read.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/types/publication/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/store/components/actions.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/store/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/store/components/reducers.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/test-obs.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/store/components/constants.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/types/publication/create.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/store/reducers/components.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/store/constants/components.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/store/actions/components.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/test-obs.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/template.spec.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/render.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/templates/create.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/env/constants.spec.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/tsconfig.json",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/api.spec.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/components/classes/Component.class.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/assert/fs.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/assert/extension.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/assert/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/cache/clear.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/cache/create.ts",
+		"/Users/tEErohr/Projects/afkm/kio/kio-ng2-cli/src/api.spec.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/cache/index.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/templates/index/ComponentIndex.ts",
+		"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/kio-ng2-cli/src/template/index.ts"
+	],
+	"find":
+	{
+		"height": 48.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Volumes/Macintosh HD 2/Development/Projects/afkm/kio/digit-pvz/src/app/kio/navigation",
+			"/Users/tEErohr/Documents/kio/angular2/digit/modules/kio-ng2-cli/src",
+			"/Users/tEErohr/Documents/kio/angular2/digit/digit-pvz/src/app",
+			"/Users/tEErohr/Documents/kio/angular2/digit/digit-pvz/src/app/kio",
+			"/Users/tEErohr/Documents/kio/angular2/digit/BMW-Art-Journey/bmwaj-ctn/src/app",
+			"/Users/tEErohr/Documents/kio/angular2/digit/BMW-Art-Journey/bmwaj-ctn/src/app/modules/kio-data/components",
+			"/Users/tEErohr/Documents/kio/angular2/digit/BMW-Art-Journey/bmwaj-ctn",
+			"/Users/tEErohr/Documents/kio/angular2/digit/BMW-Art-Journey/bmwaj-ctn/src/app",
+			"/Users/tEErohr/Documents/kio/angular2/digit/BMW-Art-Journey/bmwaj-ctn",
+			"/Users/tEErohr/Documents/kio/angular2/digit/BMW-Art-Journey/bmwaj-ctn/src/app/modules/kio-data",
+			"/Users/tEErohr/Documents/kio/angular2/digit/BMW-Art-Journey/bmwaj-ctn/src/app",
+			"/Users/tEErohr/Documents/kio/angular2/digit/BMW-Art-Journey/bmwaj-ctn/src/app/modules/kio-data",
+			"/Users/tEErohr/Documents/kio/angular2/digit/BMW-Art-Journey/bmwaj-ctn/src/app",
+			"/Users/tEErohr/Documents/kio/angular2/digit/BMW-Art-Journey/bmwaj-ctn/src/app/modules/kio-data/components",
+			"/Users/tEErohr/Documents/kio/angular2/digit/BMW-Art-Journey/bmwaj-ctn/src/app/modules",
+			"/Users/tEErohr/Documents/kio/angular2/digit/BMW-Art-Journey/bmwaj-ctn/src",
+			"/Users/tEErohr/Documents/kio/angular2/digit/digit-proto",
+			"/Users/tEErohr/Documents/kio/angular2/digit/digit-proto/src/app",
+			"/Users/tEErohr/Documents/kio/angular2/digit/digit-proto/src/app/components/publication",
+			"/Users/tEErohr/Documents/kio/angular2/digit/digit-proto/src/app",
+			"/Users/tEErohr/Documents/kio/angular2/digit/digit-proto/src/app/components/publication",
+			"/Users/tEErohr/Documents/kio/angular2/digit/digit-proto/src/app",
+			"/Users/tEErohr/Documents/kio/angular2/digit/digit-proto/src/app/components/publication",
+			"/Users/tEErohr/Documents/kio/angular2/digit/digit-proto/src/app",
+			"/Users/tEErohr/Documents/kio/angular2/digit/digit-proto/src",
+			"/Users/tEErohr/Documents/kio/tools/kio-dynamo-migrate/node_modules/bluebird/js/release",
+			"/Users/tEErohr/Documents/kio/tools/kio-dynamo-migrate/src",
+			"/Users/tEErohr/Documents/kio/components/text/kio-txt-react-dynamo-implementation/webpack",
+			"/Users/tEErohr/Documents/kio/components/text/kio-txt-react-dynamo/src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"source",
+			"argv",
+			"filename",
+			"readdir",
+			"vers",
+			"logger",
+			"type",
+			"WorkspaceNodeType",
+			"content",
+			"KioNavigationIndexComponent",
+			"backend",
+			"KioNavigationErrorService",
+			"navigationErrorService",
+			"error",
+			"publicationCriterias",
+			"/kio",
+			"PublicationFixtures",
+			"PublicationCriterias",
+			"Fixtures",
+			"Fixture",
+			"kio-ng2 index",
+			"ChoopBox2Component",
+			"KioAbstractComponent",
+			"[KioComponentType",
+			"Publication",
+			"KioComponentType",
+			"writeComponentToCache",
+			"writeCom",
+			"rxfs",
+			"index",
+			"label",
+			"RequestCallback",
+			"console",
+			"createWithData",
+			"mapComponentToPublicationComponentTemplateData",
+			"PublicationComponentTemplateData",
+			"renderTemplateFileWithData",
+			"baseFilename",
+			"templateFiles",
+			"mapTemp",
+			"index",
+			"mapExportNames",
+			"logger.log",
+			"exec",
+			"result",
+			"writeComponentsToIndexTemplate",
+			"tra",
+			"data",
+			"renderTemplateFileWithData",
+			"templateFile.source",
+			"writeFile",
+			":string",
+			"createIndexTemplateData",
+			"source:",
+			"IndexTemplateData",
+			"mapComponentToIndexItem",
+			"IndexTemplate",
+			"IndexTemplateData",
+			"indexItems",
+			"ComponentImport",
+			"template",
+			"importAlias",
+			"component",
+			"renderTemplateFileWithData",
+			"export function",
+			"readdir",
+			"execObserve",
+			"merge",
+			"readFile",
+			"stat",
+			"pstats",
+			"promisify",
+			"mapTemplateFile",
+			"logMap",
+			"index.name",
+			"ndexName",
+			"index",
+			"createIndexSource",
+			"renderFilesIndex",
+			"mapComponentToIndexItem",
+			"navigation",
+			"publication",
+			"template",
+			"renderFilesIndex",
+			"IndexFileMap",
+			"files",
+			"strea",
+			"indexes",
+			"sele",
+			"string",
+			"filter",
+			"console.log",
+			"filterIndex",
+			"') > -1",
+			"resolveFull",
+			"resolvedPath",
+			"require",
+			"resolvedPath",
+			"process.env.NODE_ENV",
+			"2/Development/Projects/afkm/kio/kio-ng2-cli/release/env/constants.js",
+			"readComponent",
+			"createWithPath",
+			"readComponents",
+			"will be",
+			"getLastCompilation",
+			"lastComp",
+			":stream",
+			"index",
+			"findComponentDirs",
+			"logError",
+			"toStr",
+			"TSC_OUT",
+			"console",
+			"stdout",
+			"fromReadable",
+			"tsc",
+			"cache",
+			"tsc",
+			"eva",
+			"value",
+			"stream",
+			"name",
+			"export",
+			"template",
+			"fs",
+			"Components",
+			"getT",
+			"readComponentsCache"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2103,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1796,
+								1796
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/test.rx.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								613,
+								613
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/find.ts",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 30,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "rxfs.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								116,
+								116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": ".npmignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/interfaces.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 82,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "tsconfig.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 757,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								757,
+								757
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "tsconfig.release.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 114.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 114.0
+	},
+	"pinned_build_system": "Packages/TypeScript/TypeScript.sublime-build",
+	"project": "rxfs.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"rx/fs",
+				"src/utils/rx/fs.ts"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"rx/lo",
+				"src/utils/rx/log.ts"
+			],
+			[
+				"idea.com",
+				"src/app/modules/kio-data/components/publication/fragment/idea/idea.component.ts"
+			],
+			[
+				"types/svg-pan-zoom",
+				"node_modules/@types/svg-pan-zoom/index.d.ts"
+			],
+			[
+				"svg-ob",
+				"src/app/modules/kio-data/components/publication/src/svg-object/svg-object.component.ts"
+			],
+			[
+				"ki-abst",
+				"src/app/modules/kio-data/components/kio-abstract/kio-abstract.component.ts"
+			],
+			[
+				"simple-sour",
+				"src/app/modules/kio-data/components/publication/src/simple-source/simple-source.component.ts"
+			],
+			[
+				"lazyload",
+				"src/app/modules/scrolling/components/lazy-load-container/lazy-load-container.component.ts"
+			],
+			[
+				"kio-navig.ser",
+				"src/app/modules/kio-data/navigation/services/kio-navigation.service.ts"
+			],
+			[
+				"imprint",
+				"src/app/modules/kio-data/components/publication/fragment/imprint/imprint.component.html"
+			],
+			[
+				"kio-content-r",
+				"src/app/modules/kio-data/components/kio-content-router/kio-content-router.component.html"
+			],
+			[
+				"kio-image",
+				"src/app/modules/kio-data/components/kio-image/kio-image.component.ts"
+			],
+			[
+				"cquery.spec",
+				"src/app/modules/kio-data/components/tests/Fixtures.cquery.spec.ts"
+			],
+			[
+				"backend.ser",
+				"src/app/modules/kio-data/services/kio-backend.service.ts"
+			],
+			[
+				"single-teaser",
+				"src/app/modules/kio-data/components/publication/fragment/single-teaser/single-teaser.component.cquery.criteria.ts"
+			],
+			[
+				"kio-navigation-me",
+				"src/app/modules/kio-data/navigation/components/kio-navigation-menu/kio-navigation-menu.component.html"
+			],
+			[
+				"menu.com",
+				"src/app/modules/kio-data/navigation/components/kio-navigation-menu/kio-navigation-menu.component.ts"
+			],
+			[
+				"kio-nav-men",
+				"src/app/modules/kio-data/navigation/components/kio-navigation-menu/kio-navigation-menu.component.ts"
+			],
+			[
+				"kio-navigation-inde",
+				"src/app/modules/kio-data/navigation/components/kio-navigation-index/kio-navigation-index.component.html"
+			],
+			[
+				"router",
+				"node_modules/@angular/router/src/router.d.ts"
+			],
+			[
+				"router/",
+				"node_modules/@angular/router/index.d.ts"
+			],
+			[
+				"query",
+				"src/app/modules/kio-data/query/Query.ts"
+			],
+			[
+				"matchcomponent",
+				"node_modules/batch/component.json"
+			],
+			[
+				"template2",
+				"src/app/modules/kio-data/components/publication/fragment/artist-template2/artist-template2.component.html"
+			],
+			[
+				"kio-list",
+				"src/app/modules/kio-data/components/kio-list/kio-list.component.ts"
+			],
+			[
+				"image-gall",
+				"src/app/modules/kio-data/components/publication/fragment/image-gallery/image-gallery.component.ts"
+			],
+			[
+				"query.ts",
+				"src/app/modules/kio-data/query/Query.ts"
+			],
+			[
+				"kio-navigation-route",
+				"src/app/modules/kio-data/navigation/classes/kio-navigation-route.ts"
+			],
+			[
+				"navigation/routes/mapt",
+				"src/app/modules/kio-data/navigation/routes/mapTypes.ts"
+			],
+			[
+				"kiofr",
+				"modules/kio-data/classes/kio-fragment.ts"
+			],
+			[
+				"kio-conte",
+				"modules/kio-data/classes/kio-content.ts"
+			],
+			[
+				"kioabstractcomponent",
+				"modules/kio-data/components/kio-abstract/kio-abstract.component.ts"
+			],
+			[
+				"content-router",
+				"modules/kio-data/components/kio-content-router/kio-content-router.component.html"
+			],
+			[
+				"content-router.ts",
+				"modules/kio-data/components/kio-content-router/kio-content-router.component.ts"
+			],
+			[
+				"content-ro",
+				"modules/kio-data/components/kio-content-router/kio-content-router.component.css"
+			],
+			[
+				"kio-node",
+				"src/app/modules/kio-data/classes/kio-node.ts"
+			],
+			[
+				"routermodule",
+				"node_modules/@angular/router/src/router_module.js"
+			],
+			[
+				"_bind",
+				"node_modules/core-js/modules/_bind.js"
+			],
+			[
+				"modules/es6/function.bind",
+				"node_modules/core-js/modules/es6.function.bind.js"
+			],
+			[
+				"core-js/es6",
+				"node_modules/core-js/es6/function.js"
+			],
+			[
+				"eases",
+				"node_modules/angular-cli/commands/easter-egg.js"
+			],
+			[
+				"weak",
+				"node_modules/babel-runtime/core-js/weak-map.js"
+			],
+			[
+				"node.ts",
+				"src/app/classes/node.ts"
+			],
+			[
+				"node.",
+				"node_modules/debug/node.js"
+			],
+			[
+				"formcontrol",
+				"node_modules/@angular/forms/src/directives/reactive_directives/form_control_directive.d.ts"
+			],
+			[
+				"http",
+				"node_modules/@angular/http/src/http.js"
+			],
+			[
+				"petitservice",
+				"node_modules/petitservice/index.js"
+			],
+			[
+				"cache-manager/lib/",
+				"node_modules/cache-manager/lib/index.js"
+			],
+			[
+				"actiont",
+				"src/constants/actionTypes.js"
+			],
+			[
+				"shou",
+				"node_modules/should/should.js"
+			],
+			[
+				"layout",
+				"styles/scss/layout.scss"
+			],
+			[
+				"layou",
+				"styles/scss/layout.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 398.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
