@@ -19,7 +19,7 @@ export const find = ( args:FindOptions|string ):Observable<string> => {
   }
 
   const command = 'find .' + (args.types !== undefined ? args.types.map ( t => ' -type '+t ).join('') : '')
-  console.log('find at ', args.cwd)
+  //console.log('find at ', args.cwd)
   return rxshell.exec(
     command,
     {cwd: args.cwd}
