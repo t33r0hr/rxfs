@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const rxjs_1 = require("rxjs");
+const rx_1 = require("rx");
 const ceylon_1 = require("ceylon");
 exports.assertObservables = (source, target, asserter) => {
-    return rxjs_1.Observable.zip(source, target).flatMap(([left, right], idx) => {
+    return rx_1.Observable.zip(source, target).flatMap(([left, right], idx) => {
         //console.log('left,right %s',idx,left,right)
         asserter(left, right, idx);
-        return rxjs_1.Observable.of(true);
+        return rx_1.Observable.of(true);
     });
 };
 exports.compareItems = (item, other, idx) => {

@@ -1,6 +1,6 @@
-import { Observable, Subscription } from 'rxjs'
+import { Observable, Subscription } from 'rx'
 import * as fs from 'fs'
-import { writeToStream } from 'rxshell'
+import { writeToStream } from 'rx-node'
 
 import * as logger from './logger'
 

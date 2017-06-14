@@ -1,8 +1,8 @@
-import { Observable, Subscription } from 'rxjs'
+import { Observable, Subscription } from 'rx'
 import { _promisify } from './common'
 import * as fs from 'fs'
 import * as path from 'path'
-import { writeToStream } from 'rxshell'
+import { writeToStream } from 'rx-node'
 import * as logger from './logger'
 import { exists } from './exists'
 

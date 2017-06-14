@@ -1,9 +1,12 @@
-import { Observable } from 'rxjs'
+import { Observable } from 'rx'
 import expect, { assert } from 'ceylon'
 
 export interface CompareAsserter<T> {
   ( item:T, other:T, idx?:number):void
 }
+
+
+type Zipped<T,K> = [T,K]
 
 export const assertObservables = <T>( source:Observable<T>, target:Observable<T>, asserter:CompareAsserter<T> ) => {
   return Observable.zip(source,target).flatMap ( ([left,right],idx) => {

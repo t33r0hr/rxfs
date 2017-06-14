@@ -1,6 +1,6 @@
-import { Observable } from 'rxjs'
+import { Observable } from 'rx'
 import * as fs from 'fs'
-import { fromReadable } from 'rxshell'
+import { exec, StreamData } from 'rxshell'
 
 
 export interface ReadFileOptions {
@@ -8,7 +8,7 @@ export interface ReadFileOptions {
   flag?: string
 }
 
-export const readFile = <T>( filepath:string, encoding?:string|ReadFileOptions ):Observable<T> => {
+export const readFile = ( filepath:string, encoding?:string|ReadFileOptions ) => {
   let options = encoding
   if ( encoding && 'string' === typeof encoding )
   {
@@ -16,5 +16,8 @@ export const readFile = <T>( filepath:string, encoding?:string|ReadFileOptions )
       encoding
     }
   }
-  return fromReadable(fs.createReadStream(filepath,options))
+  return exec({
+    command: `cat "${filepath}"`,
+    cwd: process.cwd()
+  },true)
 }

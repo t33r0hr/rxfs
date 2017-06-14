@@ -1,6 +1,6 @@
 import 'mocha'
 import expect, { assert } from 'ceylon'
-import { Observable } from 'rxjs'
+import { Observable } from 'rx'
 import * as fs from 'fs'
 
 import { logMap } from './logger'

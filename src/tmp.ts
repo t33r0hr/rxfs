@@ -1,8 +1,8 @@
 import * as path from 'path'
 import * as nodefs from 'fs'
 import { Writable } from 'stream'
-import { writeToStream } from 'rxshell'
-import { Observable } from 'rxjs'
+import { writeToStream } from 'rx-node'
+import { Observable } from 'rx'
 
 declare const Buffer
 

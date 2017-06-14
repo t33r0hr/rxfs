@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs'
+import { Observable } from 'rx'
 import { _promisify } from './common'
 import * as fs from 'fs'
 

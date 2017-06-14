@@ -1,8 +1,8 @@
-import { Observable } from 'rxjs'
+import { Observable } from 'rx'
 
 export const stack = () => {
   const err = Error('none')
-  return err.stack.split('\n').slice(4).filter( row => /rxjs/.test(row) === false )
+  return err.stack.split('\n').slice(4).filter( row => /rx/.test(row) === false )
 }
 
 export const formatValue = ( value:any ):string => {

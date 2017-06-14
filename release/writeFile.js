@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = require("fs");
-const rxshell_1 = require("rxshell");
+const rx_node_1 = require("rx-node");
 exports.writeFile = (filepath, content, encoding) => {
     let options;
     if (encoding && 'string' === typeof encoding) {
@@ -17,7 +17,7 @@ exports.writeFile = (filepath, content, encoding) => {
             encoding: 'utf8'
         };
     }
-    return rxshell_1.writeToStream(content, fs.createWriteStream(filepath, options), options.encoding);
+    return rx_node_1.writeToStream(content, fs.createWriteStream(filepath, options), options.encoding);
 };
 exports.mapWriteFile = (filepath, content, encoding) => {
     const deferred = exports.writeFile(filepath, content, encoding);

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.stack = () => {
     const err = Error('none');
-    return err.stack.split('\n').slice(4).filter(row => /rxjs/.test(row) === false);
+    return err.stack.split('\n').slice(4).filter(row => /rx/.test(row) === false);
 };
 exports.formatValue = (value) => {
     if ('string' === typeof value)

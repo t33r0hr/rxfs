@@ -1,5 +1,6 @@
 import * as rxshell from 'rxshell'
-import { Observable } from 'rxjs'
+import { Observable } from 'rx'
+import * as path from 'path'
 export type FileType = 'file'
 export type DirType = 'dir'
 
@@ -14,20 +15,19 @@ export const find = ( args:FindOptions|string ):Observable<string> => {
   if ( 'string' === typeof args )
   {
     return find ( {
-      cwd: args
+      cwd: args,
+      types: ['file']
     } )
   }
 
-  const command = 'find .' + (args.types !== undefined ? args.types.map ( t => ' -type '+t ).join('') : '')
+  const commandArgs:string[] = [];
+  (args.types||[]).forEach ( type => {
+    commandArgs.push('-type')
+    commandArgs.push(type)
+  } )
   console.log('find at ', args.cwd)
-  return rxshell.exec(
-    command,
-    {cwd: args.cwd}
-  ).flatMap ( stream => {
-    if ( stream.stderr )
-    {
-      return Promise.reject(Error(stream.stderr.toString('utf8')))
-    }
-    return Observable.of(stream.stdout.toString('utf8'))
+  return rxshell.find(commandArgs,args.cwd)
+  .map ( row => {
+    return path.join(args.cwd,`${row}`)
   } )
 }

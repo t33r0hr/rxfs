@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const rxjs_1 = require("rxjs");
+const rx_1 = require("rx");
 const stat_1 = require("./stat");
 var StatTypes;
 (function (StatTypes) {
@@ -16,12 +16,12 @@ exports.existsSync = (filepath) => !!stat_1.statSync(filepath);
 exports.exists = (filepath) => stat_1.stat(filepath)
     .map(stats => !!stats)
     .catch(error => {
-    return rxjs_1.Observable.of(false);
+    return rx_1.Observable.of(false);
 });
 const testFSType = (statType) => (filepath) => stat_1.stat(filepath)
     .map(stats => !!stats)
     .catch(error => {
-    return rxjs_1.Observable.of(false);
+    return rx_1.Observable.of(false);
 });
 exports.isType = (statType, filepath) => testFSType(statType)(filepath);
 exports.isDirectory = testFSType(StatTypes.Directory);

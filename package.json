@@ -48,8 +48,9 @@
   "dependencies": {
     "@types/shelljs": "^0.7.1",
     "ceylon": "^0.9.1",
-    "rxjs": "5.3.1",
-    "rxshell": "github:afkmatze/rxshell",
+    "rx": "^4.1.0",
+    "rx-node": "^1.0.2",
+    "rxshell": "git+ssh://git@dergoldenefoehn.de:/opt/git/rxshell#rxnode",
     "shelljs": "^0.7.7"
   }
 }

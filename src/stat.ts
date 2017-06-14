@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs'
+import { Observable } from 'rx'
 import { _promisify } from './common'
 import { stat as fsStat, Stats, statSync as fsStatSync} from 'fs'
 

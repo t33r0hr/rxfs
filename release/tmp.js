@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const path = require("path");
 const nodefs = require("fs");
-const rxshell_1 = require("rxshell");
-const rxjs_1 = require("rxjs");
+const rx_node_1 = require("rx-node");
+const rx_1 = require("rx");
 const randomInt = (max = 100, min = 0) => {
     return Math.floor(Math.random() * (max - min)) + min;
 };
@@ -26,14 +26,14 @@ const registerAutoDeletion = (filename) => {
 };
 const writeFile = (filepath, contents, encoding) => {
     const writer = nodefs.createWriteStream(filepath, encoding);
-    return rxshell_1.writeToStream(contents, writer, encoding);
+    return rx_node_1.writeToStream(contents, writer, encoding);
 };
 exports.file = (content, persist = false) => {
     const tmpFilename = path.join(process.env.TMPDIR, randomName());
-    const sub = writeFile(tmpFilename, rxjs_1.Observable.of(new Buffer(content || '')), 'utf8');
+    const sub = writeFile(tmpFilename, rx_1.Observable.of(new Buffer(content || '')), 'utf8');
     if (persist !== true) {
         registerAutoDeletion(tmpFilename);
     }
-    return rxjs_1.Observable.of(tmpFilename);
+    return rx_1.Observable.of(tmpFilename);
 };
 //# sourceMappingURL=tmp.js.map

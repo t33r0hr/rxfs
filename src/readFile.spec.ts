@@ -69,8 +69,8 @@ describe('test readFile',function(){
     })
 
     it('succeeds reading',()=>{
-      const source = readFile<Buffer>(test_json_file,'utf8')
-      return assertPackageJson(source)
+      const source = readFile(test_json_file,'utf8')
+      return assertPackageJson(<any>source)
     })
 
   })

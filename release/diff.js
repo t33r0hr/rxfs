@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const rxjs_1 = require("rxjs");
+const rx_1 = require("rx");
 const _1 = require("./");
 const rxshell_1 = require("rxshell");
 const tmp_1 = require("./tmp");
@@ -9,12 +9,12 @@ exports.diff = (opts, ...targets) => {
         return exports.diff({}, opts, ...targets);
     }
     const parser = diffParser();
-    return rxjs_1.Observable
+    return rx_1.Observable
         .from(targets)
         .flatMap(target => {
         return _1.exists(target).flatMap(doesExist => {
             if (doesExist)
-                return rxjs_1.Observable.of(target);
+                return rx_1.Observable.of(target);
             return tmp_1.file(target);
         });
     })
@@ -30,13 +30,13 @@ exports.diff = (opts, ...targets) => {
         .concatMap(command => rxshell_1.exec(command))
         .flatMap((out) => {
         if (out.stderr) {
-            return rxjs_1.Observable.throw(out.stderr.toString());
+            return rx_1.Observable.throw(out.stderr.toString());
         }
         /*if ( !out.stdout )
         {
           console.warn('no data on stdout', out)
         }*/
-        return rxjs_1.Observable.of(parser.parse(out.stdout ? out.stdout.toString() : ''));
+        return rx_1.Observable.of(parser.parse(out.stdout ? out.stdout.toString() : ''));
     })
         .toArray()
         .map(result => {

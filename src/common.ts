@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs'
+import { Observable } from 'rx'
 export interface CallbackFunction<T> {
   ( error:Error, result?:T ):void
 }

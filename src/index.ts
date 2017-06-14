@@ -1,5 +1,5 @@
 import * as path from 'path'
-import { Observable, Subscription, Observer, Scheduler } from 'rxjs'
+import { Observable, Subscription, Observer, Scheduler } from 'rx'
 import { exec } from './exec'
 
 export * from './interfaces'
