@@ -8,7 +8,7 @@ export interface ReaddirOptions {
   flag?: string
 }
 
-export const readdir = ( filepath:string ) => {
+export const readdir = ( filepath:string ):Observable<string> => {
   return find(['-maxdepth','1'],filepath)
     .map ( data => data.replace('./','') )
     .filter( item => item !== '.')
