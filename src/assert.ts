@@ -5,15 +5,22 @@ export interface CompareAsserter<T> {
   ( item:T, other:T, idx?:number):void
 }
 
-
-type Zipped<T,K> = [T,K]
-
 export const assertObservables = <T>( source:Observable<T>, target:Observable<T>, asserter:CompareAsserter<T> ) => {
-  return Observable.zip(source,target).flatMap ( ([left,right],idx) => {
-    //console.log('left,right %s',idx,left,right)
-    asserter(left,right,idx)
-    return Observable.of(true)
-  } )
+  let idx = 0
+  return Observable.zip(source,target,(left:T,right:T)=>([left,right]))
+    .flatMap ( ([left,right]) => {
+      //console.log('left,right %s',idx,left,right)
+      asserter(left,right,idx++)
+      return Observable.of(true)
+    } )
+}
+
+export const isObservable = <T>( other:any ):other is Observable<T> => {
+  return Observable.prototype.isPrototypeOf(other)
+}
+
+export const assertObservable = <T> ( other:any ) => {
+  expect(isObservable(other)).toEqual(true,'Should be an observable, but is a ' + other.constructor.name )
 }
 
 export const compareItems = <T>( item:T, other:T, idx?:number ) => {

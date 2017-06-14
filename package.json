@@ -50,7 +50,7 @@
     "ceylon": "^0.9.1",
     "rx": "^4.1.0",
     "rx-node": "^1.0.2",
-    "rxshell": "git+ssh://git@dergoldenefoehn.de:/opt/git/rxshell#rxnode",
+    "rxshell": "github:afkmatze/rxshell#v0.0.5",
     "shelljs": "^0.7.7"
   }
 }

@@ -17,7 +17,7 @@ export const readFile = ( filepath:string, encoding?:string|ReadFileOptions ) =>
     }
   }
   return exec({
-    command: `cat "${filepath}"`,
+    command: `cat ${filepath}`,
     cwd: process.cwd()
-  },true)
+  },true).map ( d => d.stdout )
 }
