@@ -38,7 +38,6 @@
   "devDependencies": {
     "@types/chai": "^3.5.2",
     "@types/mocha": "^2.2.41",
-    "@types/node": "^7.0.18",
     "mocha": "^3.3.0",
     "nodemon": "^1.11.0",
     "ts-mocha": "^1.0.3",
@@ -47,10 +46,11 @@
     "typescript": "^2.3.2"
   },
   "dependencies": {
+    "@types/node": "^7.0.18",
     "@types/shelljs": "^0.7.1",
     "ceylon": "^0.9.1",
     "rxjs": "^5.3.1",
-    "rxshell": "github:afkmatze/rxshell",
+    "rxshell": "github:afkmatze/rxshell#digit-bgr",
     "shelljs": "^0.7.7"
   }
 }
