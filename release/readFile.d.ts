@@ -9,9 +9,8 @@
 /// <reference types="rx-lite-time" />
 /// <reference types="node" />
 import { Observable } from 'rx';
-import { StreamData } from 'rxshell';
 export interface ReadFileOptions {
     encoding: string;
     flag?: string;
 }
-export declare const readFile: (filepath: string, encoding?: string | ReadFileOptions) => Observable<StreamData<string | Error | Buffer>>;
+export declare const readFile: (filepath: string, encoding?: string | ReadFileOptions) => Observable<string | Buffer>;

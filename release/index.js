@@ -3,9 +3,6 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-const path = require("path");
-const rx_1 = require("rx");
-const exec_1 = require("./exec");
 __export(require("./exec"));
 __export(require("./find"));
 __export(require("./diff"));
@@ -18,8 +15,9 @@ const tmp = require("./tmp");
 exports.tmp = tmp;
 __export(require("./exists"));
 __export(require("./from"));
-exports.readdir = (filepath) => {
-    return exec_1.exec(`find . -type file`, { cwd: filepath }).map(value => path.join(filepath, value.stdout.toString('utf8')))
-        .flatMap(value => rx_1.Observable.of(value)).concat();
-};
+/*export const readdir = ( filepath:string ):Observable<string> => {
+  return exec(`find . -type file`,filepath).map(value => path.join(filepath,value.stdout.toString('utf8')))
+              .flatMap(value => Observable.of(value)).concat()
+}
+*/ 
 //# sourceMappingURL=index.js.map

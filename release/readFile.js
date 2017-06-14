@@ -9,8 +9,8 @@ exports.readFile = (filepath, encoding) => {
         };
     }
     return rxshell_1.exec({
-        command: `cat "${filepath}"`,
+        command: `cat ${filepath}`,
         cwd: process.cwd()
-    }, true);
+    }, true).map(d => d.stdout);
 };
 //# sourceMappingURL=readFile.js.map

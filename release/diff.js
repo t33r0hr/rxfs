@@ -30,7 +30,7 @@ exports.diff = (opts, ...targets) => {
         .concatMap(command => rxshell_1.exec(command))
         .flatMap((out) => {
         if (out.stderr) {
-            return rx_1.Observable.throw(out.stderr.toString());
+            throw Error(out.stderr.toString());
         }
         /*if ( !out.stdout )
         {

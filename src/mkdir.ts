@@ -10,12 +10,15 @@ import { exists } from './exists'
 const mkdirAsync = _promisify(fs.mkdir)
 
 export const mkdir = ( directory:string ):Observable<string> => {
-  return Observable.zip(
-      exists(path.dirname(directory)),
-      exists(directory)
-    ).flatMap ( ([parentExists,dirExists]) => {
+  const leftExists = exists(path.dirname(directory))
+  const rightExists = exists(directory)
+  return Observable.zip<boolean,boolean>(
+      leftExists, rightExists
+    ).flatMap ( ([parentExists,dirExists]):Observable<string> => {
       if ( !parentExists )
-        return Observable.throw("No directory at " + path.dirname(directory) )
+      {
+        throw Error("No directory at " + path.dirname(directory))
+      }
 
       if ( dirExists )
       {

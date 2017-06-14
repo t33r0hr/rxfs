@@ -16,7 +16,8 @@ export { tmp }
 export * from './exists'
 export * from './from'
 
-export const readdir = ( filepath:string ):Observable<string> => {
-  return exec(`find . -type file`,{cwd: filepath}).map(value => path.join(filepath,value.stdout.toString('utf8')))
+/*export const readdir = ( filepath:string ):Observable<string> => {
+  return exec(`find . -type file`,filepath).map(value => path.join(filepath,value.stdout.toString('utf8')))
               .flatMap(value => Observable.of(value)).concat()
 }
+*/

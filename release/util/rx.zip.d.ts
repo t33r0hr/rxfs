@@ -7,9 +7,6 @@
 /// <reference types="rx-lite-experimental" />
 /// <reference types="rx-lite-joinpatterns" />
 /// <reference types="rx-lite-time" />
-import { Observable } from 'rx';
-export interface ReaddirOptions {
-    encoding: string;
-    flag?: string;
-}
-export declare const readdir: (filepath: string) => Observable<string>;
+import * as Rx from 'rx';
+export declare type Tuple<T, K> = [T, K];
+export declare function zip<T, K>(observableA: Rx.Observable<T>, observableB: Rx.Observable<K>): Rx.Observable<(T | K)[]>;

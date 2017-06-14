@@ -38,7 +38,7 @@ export const diff = ( opts?:any, ...targets:string[] ) => {
     .flatMap((out:StreamData<Buffer>)=>{
       if ( out.stderr )
       {
-        return Observable.throw(out.stderr.toString())
+        throw Error(out.stderr.toString())
       }
       /*if ( !out.stdout )
       {
