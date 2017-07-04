@@ -22,6 +22,8 @@
     "prebuild": "rm -rf ./release",
     "build:release": "NODE_ENV=production npm run build:ts:release",
     "build:release:watch": "./scripts/watch.sh build:release",
+    "build:dev": "./scripts/run_all.sh build:ts:release test",
+    "build:dev:watch": "./scripts/watch.sh build:dev",
     "build:package": "NODE_ENV=package npm run build",
     "build:ts": "tsc",
     "build:ts:release": "tsc -p ./tsconfig.release.json",
@@ -43,14 +45,14 @@
     "ts-mocha": "^1.0.3",
     "ts-node": "^3.0.4",
     "tslint": "^5.2.0",
-    "typescript": "^2.3.2"
+    "typescript": "2.3.4"
   },
   "dependencies": {
     "@types/node": "~6.0.60",
     "@types/shelljs": "^0.7.1",
     "ceylon": "^0.9.1",
     "rxjs": "^5.3.1",
-    "rxshell": "github:afkmatze/rxshell#digit-bgr",
+    "rxshell": "github:afkmatze/rxshell",
     "shelljs": "^0.7.7"
   }
 }

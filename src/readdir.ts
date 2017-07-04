@@ -10,6 +10,6 @@ export interface ReaddirOptions {
 
 export const readdir = ( filepath:string ) => {
   return find(['-maxdepth','1'],filepath)
-    .map ( data => data.stdout.toString().replace('./','') )
+    .map ( data => data.replace('./','') )
     .filter( item => item !== '.')
 }

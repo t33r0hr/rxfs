@@ -2,15 +2,15 @@
 
 SCRIPT_PATH="$(dirname "${0}")"
 SCRIPT_FILE="$(basename "${0}")"
-PROJECT_ROOT="$(cd "$(dirname "${0}")/.."; pwd)"
+CLI_ROOT="$(cd "$(dirname "${0}")/.."; pwd)"
 
-NODEMON_BIN="${PROJECT_ROOT}/node_modules/.bin/nodemon"
+NODEMON_BIN="${CLI_ROOT}/node_modules/.bin/nodemon"
 
-NPM_COMMAND=${1:-build}
+NPM_COMMANDS=${@}
 
 function main() {
-  cd "${PROJECT_ROOT}"
-  $NODEMON_BIN -w ./src -e ts --exec "npm run ${NPM_COMMAND}"
+  cd "${CLI_ROOT}"
+  "$NODEMON_BIN" -w ./src -e ts --exec "${SCRIPT_PATH}/run_all.sh ${NPM_COMMANDS}"
 }
 
 main
