@@ -3,7 +3,7 @@ import expect, { assert } from 'ceylon'
 import { Observable } from 'rxjs'
 import * as fs from 'fs'
 
-import { assertObservables, CompareAsserter, compareItems, expectObs } from './assert'
+import { assertObservables, CompareAsserter, compareItems, expectObs } from './assert.spec'
 
 import { writeFile, mapWriteFile } from './writeFile'
 import { writeToStream } from 'rxshell'
