@@ -4,7 +4,7 @@ import { Observable } from 'rxjs'
 import * as fs from 'fs'
 
 import { logMap } from './logger'
-import { assertObservables, CompareAsserter, compareItems, expectObs } from './assert'
+import { assertObservables, CompareAsserter, compareItems, expectObs } from './assert.spec'
 
 import { exists, existsSync, StatTypes, isType, isDirectory, isFile, isSymbolicLink, isSocket } from './exists'
 import * as path from 'path'
