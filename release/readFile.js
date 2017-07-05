@@ -1,7 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const rxjs_1 = require("rxjs");
 const fs = require("fs");
 const rxshell_1 = require("rxshell");
+const debug = require("./debug");
 exports.readFile = (filepath, encoding) => {
     let options = encoding;
     if (encoding && 'string' === typeof encoding) {
@@ -9,6 +11,18 @@ exports.readFile = (filepath, encoding) => {
             encoding
         };
     }
-    return rxshell_1.fromReadable(fs.createReadStream(filepath, options));
+    debug.log('readFile() - create read stream for "%s"', filepath);
+    let stream;
+    let error;
+    try {
+        stream = fs.createReadStream(filepath, options);
+    }
+    catch (e) {
+        error = e;
+    }
+    if (error) {
+        return rxjs_1.Observable.throw(new Error(`Failed to create read stream with Error: ${error}`));
+    }
+    return rxshell_1.fromReadable(stream);
 };
 //# sourceMappingURL=readFile.js.map

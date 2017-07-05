@@ -14,6 +14,7 @@ const ROOT = path.resolve(__dirname,'..')
 const TEST_ROOT = path.join(ROOT,'test')
 
 const TEST_DIR = path.join(TEST_ROOT,'directory')
+const TEST_DIR_FALSE = path.join(TEST_ROOT,'directory-non-existing')
 const TEST_DIR_LINK = path.join(TEST_ROOT,'directoryLink')
 const TEST_FILE_EMPTY = path.join(TEST_ROOT,'emptyFile')
 const TEST_FILE = path.join(TEST_ROOT,'textfile.txt')
@@ -65,6 +66,17 @@ describe('test exists.ts',()=>{
     it('returns true',()=>{
 
       expect(existsSync(TEST_DIR)).toEqual(true)
+
+    })
+
+  })
+
+
+  describe('existsSync() on non-existing folder',()=>{
+
+    it('returns false',()=>{
+
+      expect(existsSync(TEST_DIR_FALSE)).toEqual(false)
 
     })
 
