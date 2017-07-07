@@ -11,7 +11,7 @@ export interface WriteFileOptions {
   flag?: string
 }
 
-export const writeFile = ( filepath:string, content:Observable<Buffer>, encoding?:string|WriteFileOptions ) => {
+export const writeFile = ( filepath:string, content:Observable<Buffer>, encoding?:string|WriteFileOptions ):Observable<boolean> => {
   let options
   if ( encoding && 'string' === typeof encoding )
   {

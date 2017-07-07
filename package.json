@@ -44,7 +44,7 @@
     "ts-mocha": "^1.0.3",
     "ts-node": "^3.0.4",
     "tslint": "^5.2.0",
-    "typescript": "2.3.4"
+    "typescript": "^2.3.4"
   },
   "peerDependencies": {
     "rxjs": "^5.3.1"
