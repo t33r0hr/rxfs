@@ -14,6 +14,7 @@ export * from './stat'
 import * as tmp from './tmp'
 export { tmp }
 export * from './exists'
+export * from './unlink'
 export * from './from'
 
 export const readdir = ( filepath:string ):Observable<string> => {
