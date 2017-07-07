@@ -3,6 +3,7 @@ import * as fs from 'fs'
 import { writeToStream } from 'rxshell'
 
 import * as logger from './logger'
+import * as debug from './debug'
 
 
 export interface WriteFileOptions {
@@ -10,7 +11,7 @@ export interface WriteFileOptions {
   flag?: string
 }
 
-export const writeFile = ( filepath:string, content:Observable<Buffer>, encoding?:string|WriteFileOptions ) => {
+export const writeFile = ( filepath:string, content:Observable<Buffer>, encoding?:string|WriteFileOptions ):Observable<boolean> => {
   let options
   if ( encoding && 'string' === typeof encoding )
   {
@@ -27,7 +28,21 @@ export const writeFile = ( filepath:string, content:Observable<Buffer>, encoding
       encoding: 'utf8'
     }
   }
-  return writeToStream(content,fs.createWriteStream(filepath,options),options.encoding)
+  debug.log('writeFile() - create write stream for "%s"', filepath )
+  let stream:fs.WriteStream
+  let error
+  try{
+    stream = fs.createWriteStream(filepath,options)
+  }
+  catch(e)
+  {
+    error = e
+  }
+  if ( error )
+  {
+    return Observable.throw(new Error(`Failed to create write stream with Error: ${error}`))
+  }
+  return writeToStream(content,stream,options.encoding)
 }
 
 export const mapWriteFile = ( filepath:string, content:Observable<Buffer>, encoding?:string|WriteFileOptions ):Observable<Buffer> => {  
