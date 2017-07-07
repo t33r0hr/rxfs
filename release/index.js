@@ -17,6 +17,7 @@ __export(require("./stat"));
 const tmp = require("./tmp");
 exports.tmp = tmp;
 __export(require("./exists"));
+__export(require("./unlink"));
 __export(require("./from"));
 exports.readdir = (filepath) => {
     return exec_1.exec(`find . -type file`, { cwd: filepath }).map(value => path.join(filepath, value.stdout.toString('utf8')))
