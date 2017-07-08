@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const rxjs_1 = require("rxjs");
 const exec_1 = require("./exec");
 function flagsFromOptions(options = {}) {
     const flags = [];
@@ -15,20 +14,13 @@ exports.unlink = (filepath, options = {}) => {
     const flags = flagsFromOptions(options);
     if (flags.length > 0)
         args.unshift('-' + flags.join(''));
-    const promise = exec_1.exec({
+    return exec_1.exec({
         command: {
             commandName: 'rm',
             args
         }
-    }).toArray().toPromise().then((results) => {
-        const errors = results.filter(r => r.stderr).map(r => `${r.stderr}`);
-        if (errors.length === 0)
-            return true;
-        return Promise.reject(`Failed to delete ${filepath}. ${errors.join('\n')}`);
-    })
-        .catch(error => {
-        return Promise.reject(`Failed to delete ${filepath}. ${error}`);
+    }).map((exitCode) => {
+        return (exitCode === 0);
     });
-    return rxjs_1.Observable.fromPromise(promise);
 };
 //# sourceMappingURL=unlink.js.map

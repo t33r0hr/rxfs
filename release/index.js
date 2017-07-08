@@ -3,10 +3,10 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-const path = require("path");
 const rxjs_1 = require("rxjs");
-const exec_1 = require("./exec");
+const spawn_1 = require("./spawn");
 __export(require("./exec"));
+__export(require("./spawn"));
 __export(require("./find"));
 __export(require("./diff"));
 __export(require("./readFile"));
@@ -25,7 +25,6 @@ function debuff(value) {
     return value.toString('utf8');
 }
 exports.readdir = (filepath) => {
-    return exec_1.exec(`find . -type file`, { cwd: filepath }).map(value => path.join(filepath, debuff(value.stdout)))
-        .flatMap(value => rxjs_1.Observable.of(value)).concat();
+    return spawn_1.spawn('find', ['.', '-type', 'file'], filepath).flatMap((proc) => proc.close).concatMap(result => rxjs_1.Observable.from(result.stdout.map(b => b.toString('utf8'))));
 };
 //# sourceMappingURL=index.js.map
