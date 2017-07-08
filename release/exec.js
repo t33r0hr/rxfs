@@ -83,19 +83,22 @@ function exec(command, args, options) {
     const shouldBail = () => {
         return (errors.length > 0 && bBailOnStderr);
     };
-    return rxshell.exec(childProcessOptions, true).map((data, idx) => {
-        if (shouldBail() && data.stdout)
+    const mapSource = (data, idx) => {
+        if (shouldBail() && data['stdout'])
             return rxjs_1.Observable.throw(new Error(commandError(childProcessOptions, errors)));
-        if (data.stderr) {
-            ebufAdd(data.stdout);
+        if ('stderr' in data) {
+            ebufAdd(data.stderr);
             return '';
         }
         const out = renderData(data.stdout);
         if (!bSilent || options.stdout) {
             stdout.write(data.stdout);
         }
-        return out;
-    }).toArray().map(rows => {
+        return rxjs_1.Observable.of(out);
+    };
+    const source = rxshell.exec(childProcessOptions, true).flatMap(mapSource);
+    return source
+        .toArray().map(rows => {
         return 0;
     });
 }

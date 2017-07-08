@@ -1,6 +1,7 @@
 import { Observable } from 'rxjs';
 export * from './interfaces';
 export * from './exec';
+export * from './spawn';
 export * from './find';
 export * from './diff';
 export * from './readFile';

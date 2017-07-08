@@ -1,44 +1,27 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const rxjs_1 = require("rxjs");
-const _1 = require("./");
-const rxshell_1 = require("rxshell");
+const exists_1 = require("./exists");
+const spawn_1 = require("./spawn");
 const tmp_1 = require("./tmp");
 exports.diff = (opts, ...targets) => {
     if ('string' === typeof opts) {
         return exports.diff({}, opts, ...targets);
     }
     const parser = diffParser();
+    const mapTarget = (targetFilepath) => {
+        return exists_1.exists(targetFilepath).switchMap(ex => (ex ? rxjs_1.Observable.of(targetFilepath) : tmp_1.file(targetFilepath)));
+    };
     return rxjs_1.Observable
         .from(targets)
-        .flatMap(target => {
-        return _1.exists(target).flatMap(doesExist => {
-            if (doesExist)
-                return rxjs_1.Observable.of(target);
-            return tmp_1.file(target);
-        });
-    })
+        .flatMap(mapTarget)
         .toArray()
-        .map(filenames => {
-        return {
-            command: {
-                commandName: 'diff',
-                args: filenames
-            }
-        };
+        .concatMap(filenames => {
+        return spawn_1.spawn('diff', filenames);
     })
-        .concatMap(command => rxshell_1.exec(command))
-        .flatMap((out) => {
-        if (out.stderr) {
-            return rxjs_1.Observable.throw(out.stderr.toString());
-        }
-        /*if ( !out.stdout )
-        {
-          console.warn('no data on stdout', out)
-        }*/
-        return rxjs_1.Observable.of(parser.parse(out.stdout ? out.stdout.toString() : ''));
+        .flatMap((proc) => {
+        return proc.stdout.map(row => parser.parse(row.toString('utf8'))).ignoreElements().concat(proc.close);
     })
-        .toArray()
         .map(result => {
         return parser.result();
     });

@@ -10,6 +10,7 @@ exports.readFile = (filepath, encoding) => {
         options = {
             encoding
         };
+        return exports.readFile(filepath, options);
     }
     debug.log('readFile() - create read stream for "%s"', filepath);
     let stream;

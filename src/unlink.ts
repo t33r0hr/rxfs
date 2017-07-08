@@ -30,12 +30,7 @@ export const unlink = ( filepath:string, options:UnlinkOptions={} ):Observable<b
       commandName: 'rm',
       args
     }
-  }).concatMap ( (exitCode) => {
-    if ( exitCode === 0 )
-      return Observable.of(true)
-    return Observable.throw(new Error(`ExitCode: ${exitCode}`))
-  } )
-  .catch ( error => {
-    return Promise.reject(`Failed to delete ${filepath}. ${error}`)
+  }).map ( (exitCode):boolean => {    
+    return ( exitCode === 0 )    
   } )
 }

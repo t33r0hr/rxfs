@@ -15,7 +15,9 @@ export const readFile = <T>( filepath:string, encoding?:string|ReadFileOptions )
     options = {
       encoding
     }
+    return readFile ( filepath, options )
   }
+  
   debug.log('readFile() - create read stream for "%s"', filepath )
   
   let stream:fs.ReadStream
