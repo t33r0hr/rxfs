@@ -5,9 +5,10 @@
   "typings": "./release/index.d.ts",
   "scripts": {
     "doc": "typedoc --out documentation",
-    "pretest": "npm run build:ts",
     "test": "NODE_ENV=test ts-mocha ./src/*.spec.ts",
     "test:watch": "./scripts/watch.sh test",
+    "test:exec": "NODE_ENV=test ts-mocha ./src/exec.spec.ts",
+    "test:exec:watch": "./scripts/watch.sh test:exec",
     "test:writeFile": "NODE_ENV=test ts-mocha ./src/writeFile.spec.ts",
     "test:writeFile:watch": "./scripts/watch.sh test:writeFile",
     "prestart": "npm run build",
@@ -45,12 +46,14 @@
     "ts-mocha": "^1.0.3",
     "ts-node": "^3.0.4",
     "tslint": "^5.2.0",
-    "typescript": "2.3.4"
+    "typescript": "^2.3.4"
+  },
+  "peerDependencies": {
+    "rxjs": "^5.3.1"
   },
   "dependencies": {
     "@types/node": "^7.0.33",
     "ceylon": "^0.9.1",
-    "rxjs": "^5.3.1",
     "rxshell": "github:afkmatze/rxshell"
   }
 }

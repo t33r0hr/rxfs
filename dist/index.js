@@ -19,8 +19,13 @@ exports.tmp = tmp;
 __export(require("./exists"));
 __export(require("./unlink"));
 __export(require("./from"));
+function debuff(value) {
+    if ('string' === typeof value)
+        return value;
+    return value.toString('utf8');
+}
 exports.readdir = (filepath) => {
-    return exec_1.exec(`find . -type file`, { cwd: filepath }).map(value => path.join(filepath, value.stdout.toString('utf8')))
+    return exec_1.exec(`find . -type file`, { cwd: filepath }).map(value => path.join(filepath, debuff(value.stdout)))
         .flatMap(value => rxjs_1.Observable.of(value)).concat();
 };
 //# sourceMappingURL=index.js.map

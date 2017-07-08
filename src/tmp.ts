@@ -1,7 +1,8 @@
 import * as path from 'path'
 import * as nodefs from 'fs'
 import { Writable } from 'stream'
-import { writeToStream } from 'rxshell'
+import { readFile, ReadFileOptions } from './readFile'
+import { writeFile, WriteFileOptions } from './writeFile'
 import { Observable } from 'rxjs'
 
 declare const Buffer
@@ -36,17 +37,36 @@ const registerAutoDeletion = (filename:string) => {
   } )
 }
 
-const writeFile = ( filepath:string, contents:Observable<Buffer>, encoding:string ) => {
-  const writer = nodefs.createWriteStream(filepath,encoding)
-  return writeToStream(contents,writer,encoding)
-}
 
-export const file = ( content?:string, persist:boolean=false ):Observable<string> => {
+export function fileSync ( content?:string, persist:boolean=false ):string 
+{
   const tmpFilename = path.join(process.env.TMPDIR,randomName())
   const sub = writeFile(tmpFilename,Observable.of(new Buffer(content||'')),'utf8')
   if(persist!==true)
   {
     registerAutoDeletion(tmpFilename)
   }
-  return Observable.of(tmpFilename)
+  return tmpFilename
+}
+
+export function file ( content?:string, persist:boolean=false ):Observable<string> {
+  return Observable.of(fileSync(content,persist))
+}
+
+export function dirSync ( dirname?:string, persist:boolean=false ):string 
+{
+  if ( !dirname )
+  {
+    persist = true
+  }
+  const tmpDirectory = path.join(process.env.TMPDIR,dirname||'')  
+  if (persist!==true)
+  {
+    registerAutoDeletion(tmpDirectory)
+  }
+  return tmpDirectory
+}
+
+export function dir ( dirname?:string, persist:boolean=false ):Observable<string> {
+  return Observable.of<string>(dirSync(dirname,persist))
 }

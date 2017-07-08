@@ -4,3 +4,8 @@ export interface ExecData {
   stderr:Buffer;
   stdout:Buffer;
 }
+
+
+export interface Writable {
+  write(data:string|Buffer):void
+}

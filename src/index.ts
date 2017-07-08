@@ -17,7 +17,13 @@ export * from './exists'
 export * from './unlink'
 export * from './from'
 
+function debuff(value:string|Buffer):string {
+  if ( 'string' === typeof value ) 
+    return value
+  return value.toString('utf8')
+}
+
 export const readdir = ( filepath:string ):Observable<string> => {
-  return exec(`find . -type file`,{cwd: filepath}).map(value => path.join(filepath,value.stdout.toString('utf8')))
+  return exec(`find . -type file`,{cwd: filepath}).map(value => path.join(filepath,debuff(value.stdout)))
               .flatMap(value => Observable.of(value)).concat()
 }

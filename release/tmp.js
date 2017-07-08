@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const path = require("path");
 const nodefs = require("fs");
-const rxshell_1 = require("rxshell");
+const writeFile_1 = require("./writeFile");
 const rxjs_1 = require("rxjs");
 const randomInt = (max = 100, min = 0) => {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -24,16 +24,32 @@ const registerAutoDeletion = (filename) => {
         nodefs.unlinkSync(filename);
     });
 };
-const writeFile = (filepath, contents, encoding) => {
-    const writer = nodefs.createWriteStream(filepath, encoding);
-    return rxshell_1.writeToStream(contents, writer, encoding);
-};
-exports.file = (content, persist = false) => {
+function fileSync(content, persist = false) {
     const tmpFilename = path.join(process.env.TMPDIR, randomName());
-    const sub = writeFile(tmpFilename, rxjs_1.Observable.of(new Buffer(content || '')), 'utf8');
+    const sub = writeFile_1.writeFile(tmpFilename, rxjs_1.Observable.of(new Buffer(content || '')), 'utf8');
     if (persist !== true) {
         registerAutoDeletion(tmpFilename);
     }
-    return rxjs_1.Observable.of(tmpFilename);
-};
+    return tmpFilename;
+}
+exports.fileSync = fileSync;
+function file(content, persist = false) {
+    return rxjs_1.Observable.of(fileSync(content, persist));
+}
+exports.file = file;
+function dirSync(dirname, persist = false) {
+    if (!dirname) {
+        persist = true;
+    }
+    const tmpDirectory = path.join(process.env.TMPDIR, dirname || '');
+    if (persist !== true) {
+        registerAutoDeletion(tmpDirectory);
+    }
+    return tmpDirectory;
+}
+exports.dirSync = dirSync;
+function dir(dirname, persist = false) {
+    return rxjs_1.Observable.of(dirSync(dirname, persist));
+}
+exports.dir = dir;
 //# sourceMappingURL=tmp.js.map
