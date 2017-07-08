@@ -1,8 +1,9 @@
 import * as path from 'path'
 import * as nodefs from 'fs'
 import { Writable } from 'stream'
-import { writeToStream } from 'rx-node'
-import { Observable } from 'rx'
+import { readFile, ReadFileOptions } from './readFile'
+import { writeFile, WriteFileOptions } from './writeFile'
+import { Observable } from 'rxjs'
 
 declare const Buffer
 
@@ -36,10 +37,6 @@ const registerAutoDeletion = (filename:string) => {
   } )
 }
 
-const writeFile = ( filepath:string, contents:Observable<Buffer>, encoding:string ) => {
-  const writer = nodefs.createWriteStream(filepath,encoding)
-  return writeToStream(contents,writer,encoding)
-}
 
 export function fileSync ( content?:string, persist:boolean=false ):string 
 {
