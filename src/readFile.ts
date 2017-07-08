@@ -8,14 +8,21 @@ export interface ReadFileOptions {
   flag?: string
 }
 
-export const readFile = <T>( filepath:string, encoding?:string|ReadFileOptions ):Observable<T> => {
-  let options = encoding
+export function readFile ( filepath:string, encoding:'utf8' ):Observable<string> 
+export function readFile ( filepath:string, encoding:ReadFileOptions ):Observable<Buffer> 
+export function readFile <T extends Buffer|string>( filepath:string, encoding?:string|ReadFileOptions ):Observable<T> 
+{
+  let options:ReadFileOptions
+  let renderOutput = (data:any):T => data
   if ( encoding && 'string' === typeof encoding )
   {
     options = {
       encoding
     }
-    return readFile ( filepath, options )
+    renderOutput = (data:any) => data.toString(encoding)
+  }
+  else if ( 'object' === typeof encoding ) {
+    options = encoding
   }
   
   debug.log('readFile() - create read stream for "%s"', filepath )
@@ -32,5 +39,5 @@ export const readFile = <T>( filepath:string, encoding?:string|ReadFileOptions )
   {
     return Observable.throw(new Error(`Failed to create read stream with Error: ${error}`))
   }
-  return fromReadable(stream)
+  return fromReadable(stream).map( data => renderOutput(data) )
 }

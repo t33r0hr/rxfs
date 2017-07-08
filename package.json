@@ -3,6 +3,9 @@
   "version": "0.0.6",
   "main": "./release/index.js",
   "typings": "./release/index.d.ts",
+  "files": [
+    "./release/*.*"
+  ],
   "scripts": {
     "doc": "typedoc --out documentation",
     "test": "NODE_ENV=test ts-mocha ./src/*.spec.ts",
@@ -54,6 +57,7 @@
   "dependencies": {
     "@types/node": "^7.0.33",
     "ceylon": "^0.9.1",
+    "extglob": "^1.1.0",
     "rxshell": "github:afkmatze/rxshell"
   }
 }

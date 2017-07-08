@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const rxjs_1 = require("rxjs");
 const rxshell = require("rxshell");
+const debug = require("./debug");
 function renderData(data) {
     if ('string' === typeof data)
         return data;
@@ -88,12 +89,14 @@ function exec(command, args, options) {
             return rxjs_1.Observable.throw(new Error(commandError(childProcessOptions, errors)));
         if ('stderr' in data) {
             ebufAdd(data.stderr);
-            return '';
+            debug.log('stderr data: "%s"', data.stderr);
+            return rxjs_1.Observable.of('');
         }
         const out = renderData(data.stdout);
         if (!bSilent || options.stdout) {
             stdout.write(data.stdout);
         }
+        debug.log('stdout data: "%s"', out);
         return rxjs_1.Observable.of(out);
     };
     const source = rxshell.exec(childProcessOptions, true).flatMap(mapSource);

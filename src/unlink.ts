@@ -2,6 +2,8 @@ import { Observable } from 'rxjs'
 import { _promisify, Callable } from './common'
 import * as fs from 'fs'
 import { exec } from './exec'
+import { exists } from './exists'
+import * as debug from './debug'
 
 
 
@@ -25,12 +27,15 @@ export const unlink = ( filepath:string, options:UnlinkOptions={} ):Observable<b
   if ( flags.length > 0 )
     args.unshift('-'+flags.join(''))
 
-  return exec({
-    command: {
-      commandName: 'rm',
-      args
-    }
-  }).map ( (exitCode):boolean => {    
-    return ( exitCode === 0 )    
+  debug.log('unlink "%s" - params:', filepath, flags)
+  return exists(filepath).switchMap ( ex => {
+    return !ex ? Observable.of(true) : exec({
+        command: {
+          commandName: 'rm',
+          args
+        }
+      }).map ( (exitCode):boolean => {    
+        return ( exitCode === 0 )    
+      } )
   } )
 }

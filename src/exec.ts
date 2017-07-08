@@ -2,8 +2,7 @@ import { Observable } from 'rxjs'
 import * as path from 'path'
 import * as rxshell from 'rxshell'
 import { Writable } from './interfaces'
-
-
+import * as debug from './debug'
 
 export type ExitCode = number
 
@@ -140,13 +139,15 @@ export function exec <T extends string|rxshell.ChildProcessOptions<Buffer>> ( co
     if ( 'stderr' in data )
     {
       ebufAdd(data.stderr)
-      return ''
+      debug.log('stderr data: "%s"', data.stderr)
+      return Observable.of('')
     }
     const out = renderData(data.stdout)
     if ( !bSilent || options.stdout )
     {
       stdout.write(data.stdout)
     }
+    debug.log('stdout data: "%s"', out)
     return Observable.of(out)
   } 
   
