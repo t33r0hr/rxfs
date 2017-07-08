@@ -1,6 +1,6 @@
 import * as path from 'path'
 import { Observable, Subscription, Observer, Scheduler } from 'rxjs'
-import { exec } from './exec'
+import { spawn , RxProcess } from './spawn'
 
 export * from './interfaces'
 export * from './exec'
@@ -24,6 +24,5 @@ function debuff(value:string|Buffer):string {
 }
 
 export const readdir = ( filepath:string ):Observable<string> => {
-  return exec(`find . -type file`,{cwd: filepath}).map(value => path.join(filepath,debuff(value.stdout)))
-              .flatMap(value => Observable.of(value)).concat()
+  return spawn('find',['.','-type','file'],filepath).flatMap((proc:RxProcess) => proc.close).concatMap(result => Observable.from(result.stdout.map(b => b.toString('utf8'))))
 }

@@ -2,8 +2,9 @@ import { Observable } from 'rxjs'
 import * as path from 'path'
 import { logMap } from './logger'
 
-import { exists } from './'
-import { exec, StreamData } from 'rxshell'
+import { exists } from './exists'
+import { exec } from './exec'
+import { spawn } from './spawn'
 import { file as tmpFile } from './tmp'
 
 export const diff = ( opts?:any, ...targets:string[] ) => {
@@ -14,39 +15,23 @@ export const diff = ( opts?:any, ...targets:string[] ) => {
   
   const parser = diffParser()
 
+  const mapTarget = ( targetFilepath:string ):Observable<string> => {
+    return exists(targetFilepath).switchMap ( ex => (
+        ex ? Observable.of(targetFilepath) : tmpFile(targetFilepath)
+      ) 
+    )
+  }
+
   return Observable
     .from(targets)
-    .flatMap(
-      target => {
-        return exists ( target ).flatMap ( doesExist => {
-          if ( doesExist )
-            return Observable.of(target)
-          return tmpFile(target)
-        } )
-      }
-    )
+    .flatMap( mapTarget )
     .toArray()
-    .map ( filenames => {
-      return {
-        command: {
-          commandName: 'diff',
-          args: filenames
-        }
-      }
+    .concatMap ( filenames => {
+      return spawn('diff',filenames)
     } )
-    .concatMap ( command => exec(command) )
-    .flatMap((out:StreamData<Buffer>)=>{
-      if ( out.stderr )
-      {
-        return Observable.throw(out.stderr.toString())
-      }
-      /*if ( !out.stdout )
-      {
-        console.warn('no data on stdout', out)
-      }*/
-      return Observable.of(parser.parse(out.stdout ? out.stdout.toString() : ''))
+    .flatMap((proc)=>{
+      return proc.stdout.map ( row => parser.parse(row.toString('utf8')) ).ignoreElements().concat(proc.close)
     })
-    .toArray()
     .map ( result => {
       return parser.result()
     } )

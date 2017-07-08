@@ -23,6 +23,12 @@ export interface ExecOptions {
   bailOnStderr?: boolean
 }
 
+export interface ExecResult {
+  exitCode:ExitCode
+  stderr:Buffer[]
+  stdout:Buffer[]
+}
+
 export function isExecOptions ( other:any ):other is ExecOptions {
   return ( 'object' === typeof other ) && (
       ( 'args' in other )
@@ -40,30 +46,30 @@ export function isExecOptions ( other:any ):other is ExecOptions {
 }
 
 
-export function isChildProcessOptions ( other:any ):other is rxshell.ChildProcessOptions<string|Buffer> {
+export function isChildProcessOptions ( other:any ):other is rxshell.ChildProcessOptions<Buffer> {
   return ( 'command' in other )
 }
 
 
-function commandError ( command:rxshell.ChildProcessOptions<string|Buffer>, errors:string[] ):string {
+function commandError ( command:rxshell.ChildProcessOptions<Buffer>, errors:string[] ):string {
   const params = rxshell.parseCommand(command.command)
   return `Failed to execute "${params.commandName} ${params.args.join(' ')}" at "${command.cwd}":
 ---------
 ${errors.join('\n---------\n')}`
 }
 
-export function exec <T extends rxshell.ChildProcessOptions<string|Buffer>>( command:T, args?:string[]|ExecOptions, options?:ExecOptions ):Observable<ExitCode>
+export function exec <T extends rxshell.ChildProcessOptions<Buffer>>( command:T, args?:string[]|ExecOptions, options?:ExecOptions ):Observable<ExitCode>
 export function exec <T extends string> ( command:T, args?:string[], options?:ExecOptions ):Observable<ExitCode>
-export function exec <T extends string|rxshell.ChildProcessOptions<string|Buffer>> ( command:T, args?:string[]|ExecOptions, options?:ExecOptions ):Observable<ExitCode>
+export function exec <T extends string|rxshell.ChildProcessOptions<Buffer>> ( command:T, args?:string[]|ExecOptions, options?:ExecOptions ):Observable<ExitCode>
 {
   let commandParams:rxshell.CommandParams
-  let childProcessOptions:rxshell.ChildProcessOptions<string|Buffer>
+  let childProcessOptions:rxshell.ChildProcessOptions<Buffer>
 
   if ( 'string' === typeof command )
   {
     const cmd:rxshell.CommandParams = rxshell.parseCommand(<string>command)
 
-    return exec<rxshell.ChildProcessOptions<string|Buffer>>({command: cmd},args,options)
+    return exec<rxshell.ChildProcessOptions<Buffer>>({command: cmd},args,options)
   }
   if ( isChildProcessOptions(command) )
   {
@@ -112,7 +118,7 @@ export function exec <T extends string|rxshell.ChildProcessOptions<string|Buffer
     errorBuffer = undefined
   }
 
-  const ebufAdd = ( row:string|Buffer ) => {
+  const ebufAdd = ( row:Buffer ) => {
     if ( !errorBuffer )
       errorBuffer = ''
     errorBuffer += renderData(row)
@@ -126,12 +132,14 @@ export function exec <T extends string|rxshell.ChildProcessOptions<string|Buffer
     return ( errors.length > 0 && bBailOnStderr )
   }
 
-  return rxshell.exec(childProcessOptions,true).map ( (data,idx:number) => {
-    if ( shouldBail() && data.stdout )
+
+  const mapSource = (data,idx:number) => {
+    if ( shouldBail() && data['stdout'] )
       return Observable.throw(new Error(commandError(childProcessOptions,errors)))
-    if ( data.stderr )
+    
+    if ( 'stderr' in data )
     {
-      ebufAdd(data.stdout)
+      ebufAdd(data.stderr)
       return ''
     }
     const out = renderData(data.stdout)
@@ -139,9 +147,15 @@ export function exec <T extends string|rxshell.ChildProcessOptions<string|Buffer
     {
       stdout.write(data.stdout)
     }
-    return out
-  } ).toArray().map ( rows => {
+    return Observable.of(out)
+  } 
+  
+  const source = rxshell.exec(childProcessOptions,true).flatMap ( mapSource )
+
+
+  return source
+    .toArray().map ( rows => {
     return 0
-  } )
+  })
 
 }
