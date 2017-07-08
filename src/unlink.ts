@@ -25,20 +25,17 @@ export const unlink = ( filepath:string, options:UnlinkOptions={} ):Observable<b
   if ( flags.length > 0 )
     args.unshift('-'+flags.join(''))
 
-  const promise = exec({
+  return exec({
     command: {
       commandName: 'rm',
       args
     }
-  }).toArray().toPromise().then ( (results):PromiseLike<any>|boolean => {
-    const errors = results.filter ( r => r.stderr ).map ( r => `${r.stderr}` )
-    if ( errors.length === 0 )
-      return true
-    return Promise.reject(`Failed to delete ${filepath}. ${errors.join('\n')}`)
+  }).concatMap ( (exitCode) => {
+    if ( exitCode === 0 )
+      return Observable.of(true)
+    return Observable.throw(new Error(`ExitCode: ${exitCode}`))
   } )
   .catch ( error => {
     return Promise.reject(`Failed to delete ${filepath}. ${error}`)
   } )
-
-  return Observable.fromPromise(promise)
 }

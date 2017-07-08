@@ -15,20 +15,18 @@ exports.unlink = (filepath, options = {}) => {
     const flags = flagsFromOptions(options);
     if (flags.length > 0)
         args.unshift('-' + flags.join(''));
-    const promise = exec_1.exec({
+    return exec_1.exec({
         command: {
             commandName: 'rm',
             args
         }
-    }).toArray().toPromise().then((results) => {
-        const errors = results.filter(r => r.stderr).map(r => `${r.stderr}`);
-        if (errors.length === 0)
-            return true;
-        return Promise.reject(`Failed to delete ${filepath}. ${errors.join('\n')}`);
+    }).concatMap((exitCode) => {
+        if (exitCode === 0)
+            return rxjs_1.Observable.of(true);
+        return rxjs_1.Observable.throw(new Error(`ExitCode: ${exitCode}`));
     })
         .catch(error => {
         return Promise.reject(`Failed to delete ${filepath}. ${error}`);
     });
-    return rxjs_1.Observable.fromPromise(promise);
 };
 //# sourceMappingURL=unlink.js.map
