@@ -17,6 +17,7 @@ __export(require("./stat"));
 const tmp = require("./tmp");
 exports.tmp = tmp;
 __export(require("./exists"));
+__export(require("./unlink"));
 __export(require("./from"));
 function debuff(value) {
     if ('string' === typeof value)
