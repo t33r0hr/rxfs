@@ -136,6 +136,7 @@ export function exec <T extends string|rxshell.ChildProcessOptions<Buffer>> ( co
     if ( shouldBail() && data['stdout'] )
       return Observable.throw(new Error(commandError(childProcessOptions,errors)))
     
+    debug.log('mapSource %s', idx, Object.keys(data))
     if ( 'stderr' in data )
     {
       ebufAdd(data.stderr)

@@ -14,15 +14,15 @@ var StatTypes;
 })(StatTypes = exports.StatTypes || (exports.StatTypes = {}));
 exports.existsSync = (filepath) => !!stat_1.statSync(filepath);
 exports.exists = (filepath) => stat_1.stat(filepath)
-    .map(stats => !!stats)
     .catch(error => {
     return rxjs_1.Observable.of(false);
-});
+})
+    .map(stats => !!stats);
 const testFSType = (statType) => (filepath) => stat_1.stat(filepath)
-    .map(stats => !!stats)
     .catch(error => {
     return rxjs_1.Observable.of(false);
-});
+})
+    .map(stats => !!stats);
 exports.isType = (statType, filepath) => testFSType(statType)(filepath);
 exports.isDirectory = testFSType(StatTypes.Directory);
 exports.isFIFO = testFSType(StatTypes.FIFO);

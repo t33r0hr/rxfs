@@ -9,3 +9,9 @@ export interface ExecData {
 export interface Writable {
   write(data:string|Buffer):void
 }
+
+export type FlagValue = boolean|string|number
+
+export interface Flags {
+  [key: string]: FlagValue|FlagValue[]
+}

@@ -87,6 +87,7 @@ function exec(command, args, options) {
     const mapSource = (data, idx) => {
         if (shouldBail() && data['stdout'])
             return rxjs_1.Observable.throw(new Error(commandError(childProcessOptions, errors)));
+        debug.log('mapSource %s', idx, Object.keys(data));
         if ('stderr' in data) {
             ebufAdd(data.stderr);
             debug.log('stderr data: "%s"', data.stderr);

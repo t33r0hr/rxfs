@@ -12,6 +12,8 @@
     "test:watch": "./scripts/watch.sh test",
     "test:exec": "NODE_ENV=test ts-mocha ./src/exec.spec.ts",
     "test:exec:watch": "./scripts/watch.sh test:exec",
+    "test:touch": "NODE_ENV=test ts-mocha ./src/touch.spec.ts",
+    "test:touch:watch": "./scripts/watch.sh test:touch",
     "test:writeFile": "NODE_ENV=test ts-mocha ./src/writeFile.spec.ts",
     "test:writeFile:watch": "./scripts/watch.sh test:writeFile",
     "prestart": "npm run build",

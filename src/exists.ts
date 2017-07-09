@@ -17,17 +17,17 @@ export enum StatTypes {
 export const existsSync = ( filepath:string ):boolean => !!statSync(filepath)
 
 export const exists = ( filepath:string ):Observable<boolean> => stat(filepath)
-.map ( stats => !!stats )
 .catch ( error => {
   return Observable.of(false)
 })
+.map ( stats => !!stats )
 
 
 const testFSType = ( statType:StatTypes ) => (filepath:string ):Observable<boolean> => stat(filepath)
-.map ( stats => !!stats )
 .catch ( error => {
   return Observable.of(false)
 })
+.map ( stats => !!stats )
 
 export const isType = ( statType:StatTypes , filepath:string ) => testFSType(statType)(filepath)
 export const isDirectory = testFSType(StatTypes.Directory)

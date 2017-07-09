@@ -12,6 +12,7 @@ exports.filter = filter;
 __export(require("./exec"));
 __export(require("./spawn"));
 __export(require("./find"));
+__export(require("./touch"));
 __export(require("./diff"));
 __export(require("./readFile"));
 __export(require("./writeFile"));
