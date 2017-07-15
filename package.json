@@ -3,37 +3,20 @@
   "version": "0.0.6",
   "main": "./release/index.js",
   "typings": "./release/index.d.ts",
-  "files": [
-    "./release/*.*"
-  ],
   "scripts": {
     "doc": "typedoc --out documentation",
     "test": "NODE_ENV=test ts-mocha ./src/*.spec.ts",
     "test:watch": "./scripts/watch.sh test",
-    "test:exec": "NODE_ENV=test ts-mocha ./src/exec.spec.ts",
-    "test:exec:watch": "./scripts/watch.sh test:exec",
-    "test:touch": "NODE_ENV=test ts-mocha ./src/touch.spec.ts",
-    "test:touch:watch": "./scripts/watch.sh test:touch",
-    "test:writeFile": "NODE_ENV=test ts-mocha ./src/writeFile.spec.ts",
-    "test:writeFile:watch": "./scripts/watch.sh test:writeFile",
-    "prestart": "npm run build",
-    "start": "npm run dev",
-    "dev": "./node_modules/.bin/nodemon -e ts --ignore dist/ --exec \"npm run dev\"",
-    "watch:test": "ts-mocha -w ./test/**/*.spec.ts",
-    "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
     "version": "npm run build:release",
     "postversion": "git push && git push --tags",
     "build": "npm run build:release",
-    "prebuild:release": "rm -rf ./release",
-    "prebuild": "rm -rf ./release",
     "build:release": "NODE_ENV=production npm run build:ts:release",
     "build:release:watch": "./scripts/watch.sh build:release",
     "build:dev": "./scripts/run_all.sh build:ts:release test",
     "build:dev:watch": "./scripts/watch.sh build:dev",
     "build:package": "NODE_ENV=package npm run build",
     "build:ts": "tsc",
-    "build:ts:release": "tsc -p ./tsconfig.release.json",
-    "package:minify": "uglifyjs release/index.js --source-map release/index.min.js.map --source-map-url release/index.js.map --compress --mangle --screw-ie8 --output release/index.min.js"
+    "build:ts:release": "tsc -p ./tsconfig.release.json"
   },
   "repository": {
     "type": "git",
