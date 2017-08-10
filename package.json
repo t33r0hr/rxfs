@@ -1,6 +1,6 @@
 {
   "name": "rxfs",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "main": "./release/index.js",
   "typings": "./release/index.d.ts",
   "scripts": {
