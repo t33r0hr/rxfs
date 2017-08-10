@@ -43,6 +43,6 @@
     "@types/node": "^7.0.33",
     "ceylon": "^0.9.1",
     "extglob": "^1.1.0",
-    "rxshell": "github:afkmatze/rxshell"
+    "rxshell": "github:afkmatze/rxshell#v0.0.8"
   }
 }
